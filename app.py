@@ -6,7 +6,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import json
 # import the installed Jira library
-from jira import JIRAa
+from jira import JIRA
 from datetime import datetime
 
 
@@ -164,4 +164,4 @@ def ping():
         
 if __name__ == '__main__':
     
-    app.run(debug= True)
+    app.run()
