@@ -163,9 +163,4 @@ def ping():
     return render_template('index.html')
         
 if __name__ == '__main__':
-    
-<<<<<<< HEAD
     app.run()
-=======
-    app.run()
->>>>>>> main
