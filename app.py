@@ -164,4 +164,8 @@ def ping():
         
 if __name__ == '__main__':
     
+<<<<<<< HEAD
     app.run()
+=======
+    app.run()
+>>>>>>> main
