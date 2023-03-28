@@ -6,7 +6,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import json
 # import the installed Jira library
-from jira import JIRA
+from jira import JIRAa
 from datetime import datetime
 
 
