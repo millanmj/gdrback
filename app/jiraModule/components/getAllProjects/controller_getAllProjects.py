@@ -1,3 +1,4 @@
+from flask import jsonify
 from jira import JIRA
 from modules.filtros import filtrarProyectos
 from settings.settings import settings
@@ -14,30 +15,33 @@ tokenId: str = settings.APIKEY
 conexion = Conexion()
 
 
-def getInitiatives()->dict:
+def getInitiatives()->list:
     '''     
     Pos: comforma un diccionario con las iniciativas de la tabla GDR
     '''
         
     initiatives: dict = {}
-    try:
-        Base.metadata.create_all(engine)
+    initiative: dict = {'name': str, 'description': str}
     
+    try:
+        Base.metadata.create_all(engine)    
         consulta = db.session.query(GDR)
-        print(consulta)
+       
         resultados = consulta.all()
 
-        for resultado in resultados:
-            initiatives[str(resultado.Id)] = (str(resultado.nombre), str(resultado.descripcion))
-
+        for resultado in resultados:          
+            initiative['name'] = str(resultado.nombre)
+            initiative['description'] = str(resultado.descripcion)
+            initiatives[resultado.Id] = initiative            
+            initiative = {}
         
-       
     except Exception as e:
         print(e)
         initiatives = "Ocurrio un error en la consulta a la tabla del campo Iniciativas"
-    return dict(initiatives)
+    
+    return initiatives
 
-def getAllProjects() -> dict:
+def getAllProjects() -> list:
     '''
     Pos: consulta los proyectos en Jira, los filtra y devuelve 
     un diccionario con los mismos.
