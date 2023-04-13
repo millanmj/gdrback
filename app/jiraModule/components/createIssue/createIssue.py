@@ -6,12 +6,14 @@ from flask import Blueprint, jsonify, request
 import json
 from jiraModule.utils.conexion import conexion
 from settings.settings import settings
+from jiraModule.utils.conexion import jiraConectionServices
 
 AMBIENTE: str = settings.AMBIENTE
 domain: str = settings.DOMAIN
 mail: str = settings.MAIL
 tokenId: str = settings.APIKEY
 
+jira = jiraConectionServices.JiraService()
 conexion = Conexion()
 createIssue_bp = Blueprint("createIssue_bp", __name__)
 
@@ -20,10 +22,7 @@ createIssue_bp = Blueprint("createIssue_bp", __name__)
 #Crear requerimiento con la libreria de Jira
 
 @createIssue_bp.route('/createissue', methods=['POST'])
-def CreateNewIssue() -> json:   
-    
-    jiraOptions ={'server': "https://"+domain+".atlassian.net"}
-    jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
+def CreateNewIssue() -> json:  
     
     data = request.json
 
@@ -47,7 +46,7 @@ def CreateNewIssue() -> json:
 
     print(f'esto es issue_dict {issue_dict}')
     
-    new_issue = jira.create_issue(fields=issue_dict)
+    new_issue = jira.post(issue_dict)
  
     #jira.add_attachment(issue=new_issue, attachment='C:/Users/Colaborador/Documents/logo-icon.png')
 
