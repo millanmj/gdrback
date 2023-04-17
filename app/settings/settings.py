@@ -7,7 +7,7 @@ class Settings:
     DOMAIN: str 
     MAIL: str 
     APIKEY: str
-    AMBIENTE: str
+    ENVIROMENT: str
     DBUSER: str
     DBPASS: str
     DBIP: str
@@ -18,7 +18,7 @@ settings = Settings(
     DOMAIN=os.getenv('DOMAIN'),
     MAIL=os.getenv('MAIL'),
     APIKEY=os.getenv('APIKEY'),
-    AMBIENTE=os.getenv('AMBIENTE'),
+    ENVIROMENT=os.getenv('ENVIROMENT'),
     DBUSER=os.getenv('DBUSER'),
     DBPASS=os.getenv('DBPASS'),
     DBIP=os.getenv('DBIP')

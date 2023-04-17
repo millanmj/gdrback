@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from jiraModule.components.getAllProjects.view_getAllProjects import getAllProjects_bp
 from jiraModule.components.test.test import test_bp
-from jiraModule.components.createIssue.createIssue import createIssue_bp
+from jiraModule.components.createIssue.view_createIssue import createIssue_bp
 from jiraModule.components.getIssues.getIssues import getIssues_bp
 from jiraModule.components.getIssueForID.getIssueForID import getIssueForID_bp
 from jiraModule.components.home.home import home_bp

@@ -1,7 +1,7 @@
 import json
 
 
-def mapeoGerencia(gerente:str, ambiente: str)->str:
+def mapeoGerencia(gerente:str, ENVIROMENT: str)->str:
     
     posicion: int = 1
     gerencia: str = ''
@@ -17,7 +17,7 @@ def mapeoGerencia(gerente:str, ambiente: str)->str:
                         'Mariela Luna' : ['10032', '10049'] #Riesgo
                      }
     
-    if( ambiente == 'PROD'):
+    if( ENVIROMENT == 'PROD'):
         posicion = 0
    
     if gerente in gerencias:
@@ -28,7 +28,7 @@ def mapeoGerencia(gerente:str, ambiente: str)->str:
     return gerencia
 
 
-def mapeoDeGerente(gerente:str, ambiente: str) -> str:
+def mapeoDeGerente(gerente:str, ENVIROMENT: str) -> str:
     
     idGerente: str = ''
 
@@ -42,7 +42,7 @@ def mapeoDeGerente(gerente:str, ambiente: str) -> str:
                         'Mariela Luna' : '60b55e675fa6f1006f93d22b' #Gerenta de Riesgo
                      }
 
-    if( ambiente == 'PROD'):
+    if( ENVIROMENT == 'PROD'):
         
         if gerente in gerentes:
             idGerente = gerentes[gerente]    
@@ -53,16 +53,16 @@ def mapeoDeGerente(gerente:str, ambiente: str) -> str:
     return idGerente
 
 
-def mapeoDeRequerimientos(data: json, issue_dict : dict, ambiente: str) -> dict:
-    print(ambiente)
+def mapeoDeRequerimientos(data: json, issue_dict : dict, ENVIROMENT: str) -> dict:
+    print(ENVIROMENT)
     print('data en funcion', data)
     names: list = ['GDD', 'GT', 'GP0007', 'RDG', 'SP000BN']
     
-    if (ambiente == 'PROD'):
+    if (ENVIROMENT == 'PROD'):
         if (data['key'] == 'GDD'):
         
             issue_dict["customfield_10003"] = [{'accountId':str(data['approvers'])}]             
-            issue_dict["customfield_10054"] = [{'id':mapeoGerencia(str(data['approvers']), ambiente)}]
+            issue_dict["customfield_10054"] = [{'id':mapeoGerencia(str(data['approvers']), ENVIROMENT)}]
             issue_dict["issuetype"] = {"id":"10001"}                         
 
             if "finalDate" in data:

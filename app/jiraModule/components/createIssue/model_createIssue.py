@@ -22,7 +22,7 @@ class Issue:
     
     def __str__(self):
         
-        content: str = '''
+        content: str = f'''
             Nombre del proyecto: {self.project} 
             Titulo del requerimiento: {self.summary}
             Descripción: {self.description}

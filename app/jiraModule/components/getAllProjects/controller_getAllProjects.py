@@ -8,7 +8,7 @@ from jiraModule.utils.conexion.db import Base
 from jiraModule.utils.conexion import db
 from jiraModule.components.getAllProjects.model_GDR import GDR
 
-AMBIENTE: str = settings.AMBIENTE
+ENVIROMENT: str = settings.ENVIROMENT
 domain: str = settings.DOMAIN
 mail: str = settings.MAIL
 tokenId: str = settings.APIKEY

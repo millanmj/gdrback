@@ -3,27 +3,33 @@ from jira import JIRA
 from flask import request
 
 class JiraService:
+    
     def __init__(self):
-
-
-        self.ambiente = settings.AMBIENTE
-        self.domain = settings.DOMAIN
-        self.mail = settings.MAIL
-        self.tokenId = settings.APIKEY
-        self.jiraOptions = {'server': f'https://{self.domain}.atlassian.net'}
-        
+        self.enviroment = settings.ENVIROMENT
+        self.__domain = settings.DOMAIN
+        self.__mail = settings.MAIL
+        self.__tokenId = settings.APIKEY
+        self.__jiraOptions = {'server': f'https://{self.__domain}.atlassian.net'}
+            
+    def getDomain(self)-> str:
+        return self.__domain
     
-    # def get(self, path):
-    #     self.path = path
-    #     response = requests.get(self.url + self.path, auth=self.auth, headers=self.headers)
-    #     return response
+    def getEnviroment(self)-> str:
+        return self.enviroment
     
+    def getMail(self)-> str:
+        return self.__mail
+    
+    def getJiraOptions(self)-> str:
+        return self.__jiraOptions   
+       
     def getConection(self):
-        jira = JIRA(options=self.jiraOptions, basic_auth=(self.mail, self.tokenId))
+        print('conectando')
+        jira = JIRA(options=self.__jiraOptions, basic_auth=(self.__mail, self.__tokenId))
         return jira
     
-
-
-    def post(self, issue, jira):
-        newIssue = jira.create_issue(fields=issue)
-        return newIssue
+    def __repr__(self):
+        attrs = vars(self)
+        attrs_str = ', '.join([f"{key}={value!r}" for key, value in attrs.items()])
+        repr : str = f"<{self.__class__.__name__}({attrs_str})>"
+        return repr

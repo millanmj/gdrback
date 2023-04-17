@@ -8,7 +8,7 @@ from jiraModule.utils.conexion import conexion
 import requests
 from settings.settings import settings
 
-AMBIENTE: str = settings.AMBIENTE
+ENVIROMENT: str = settings.ENVIROMENT
 domain: str = settings.DOMAIN
 mail: str = settings.MAIL
 tokenId: str = settings.APIKEY
