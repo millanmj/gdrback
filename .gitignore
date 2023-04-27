@@ -5,3 +5,5 @@
 __pycache__
 Dockerfile
 /*.json
+app\jiraModule\components\jiraCredential.env
+GDRBack
