@@ -1,6 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
-from settings.settings import settings
+from app.settings.settings import settings
 
 class Conexion:
     
@@ -14,8 +14,17 @@ class Conexion:
         self.url = "https://{0}.atlassian.net/rest/api/3/".format(self.domain)
     
     def get(self, path):
-        self.path = path
-        response = requests.get(self.url + self.path, auth=self.auth, headers=self.headers)
+        if isinstance(path, str):
+            self.path = path
+            response = requests.get(self.url + self.path, auth=self.auth, headers=self.headers)
+            return response
+        elif isinstance(path, dict):
+            return self._get_with_params(path)
+        else:
+            raise ValueError("Invalid path type")
+    
+    def _get_with_params(self, params_dict):
+        response = requests.get(self.url + 'search', auth=self.auth, headers=self.headers, params=params_dict)
         return response
     
     def post(self, path, data):

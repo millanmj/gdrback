@@ -1,4 +1,4 @@
-from settings.settings import settings
+from app.settings.settings import settings
 from jira import JIRA
 from flask import request
 
@@ -10,9 +10,11 @@ class JiraService:
         self.__mail = settings.MAIL
         self.__tokenId = settings.APIKEY
         self.__jiraOptions = {'server': f'https://{self.__domain}.atlassian.net'}
-            
+        self.__url = f'https://{self.__domain}.atlassian.net'
+         
     def getDomain(self)-> str:
         return self.__domain
+    
     
     def getEnviroment(self)-> str:
         return self.enviroment
@@ -22,10 +24,17 @@ class JiraService:
     
     def getJiraOptions(self)-> str:
         return self.__jiraOptions   
+    
+    def getUrl(self) -> str:
+        return self.__url
        
-    def getConection(self):
-        print('conectando')
-        jira = JIRA(options=self.__jiraOptions, basic_auth=(self.__mail, self.__tokenId))
+    def getConection(self):       
+        jira: object = None
+        try:
+            jira = JIRA(options=self.__jiraOptions, basic_auth=(self.__mail, self.__tokenId))
+          
+        except Exception as e:
+            print(f'Ocurrio un error al conectar: {e}')
         return jira
     
     def __repr__(self):

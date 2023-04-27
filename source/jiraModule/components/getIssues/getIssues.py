@@ -1,12 +1,12 @@
 from jira import JIRA
 import requests
-from modules.mapeoDeRequerimientos import MapeoDeRequerimientos
-from jiraModule.utils.conexion.conexion import Conexion
+from app.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
+from app.jiraModule.utils.conexion.conexion import Conexion
 from flask import Blueprint, jsonify
 import json
-from jiraModule.utils.conexion import conexion
+from app.jiraModule.utils.conexion import conexion
 import requests
-from settings.settings import settings
+from app.settings.settings import settings
 
 ENVIROMENT: str = settings.ENVIROMENT
 domain: str = settings.DOMAIN
