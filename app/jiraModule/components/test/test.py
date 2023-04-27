@@ -1,9 +1,9 @@
 
-from jiraModule.utils.conexion.conexion import Conexion
+from app.jiraModule.utils.conexion.conexion import Conexion
 
 from flask import Blueprint, jsonify
 import json
-from jiraModule.utils.conexion import conexion
+from app.jiraModule.utils.conexion import conexion
 
 
 conexion = Conexion()

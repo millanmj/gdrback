@@ -1,12 +1,12 @@
 from flask import jsonify
 from jira import JIRA
-from modules.filtros import filtrarProyectos
-from settings.settings import settings
-from jiraModule.utils.conexion.conexion import Conexion
-from jiraModule.utils.conexion.db import engine
-from jiraModule.utils.conexion.db import Base
-from jiraModule.utils.conexion import db
-from jiraModule.components.getAllProjects.model_GDR import GDR
+from app.modules.filtros import filtrarProyectos
+from app.settings.settings import settings
+from app.jiraModule.utils.conexion.conexion import Conexion
+from app.jiraModule.utils.conexion.db import engine
+from app.jiraModule.utils.conexion.db import Base
+from app.jiraModule.utils.conexion import db
+from app.jiraModule.components.getAllProjects.model_GDR import GDR
 
 ENVIROMENT: str = settings.ENVIROMENT
 domain: str = settings.DOMAIN
@@ -47,6 +47,7 @@ def getAllProjects() -> list:
     un diccionario con los mismos.
     
     '''
+    print('esto es getallprojects controllers')
     jiraOptions ={'server': "https://"+domain+".atlassian.net"}
     jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
     data: list=[]
@@ -62,5 +63,5 @@ def getAllProjects() -> list:
 
     data = filtrarProyectos(data)
     sorted(data, key=lambda name: max(list(name.values())))    
-    
+    print(data)
     return data

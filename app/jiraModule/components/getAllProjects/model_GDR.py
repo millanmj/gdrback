@@ -1,5 +1,5 @@
 # from utils.conexion.db import Base
-from jiraModule.utils.conexion.db import Base
+from app.jiraModule.utils.conexion.db import Base
 from sqlalchemy import Column, Integer, String
 
 

@@ -1,5 +1,5 @@
 import json
-from modules.mapeoGerencia import *
+from app.modules.mapeoGerencia import *
 
 def MapeoDeRequerimientos(data: json, issue_dict : dict, ENVIROMENT: str) -> dict:
     print(ENVIROMENT)
