@@ -19,8 +19,8 @@ app.register_blueprint(getAllProjects_bp)
 app.register_blueprint(getIssueForID_bp)
 app.register_blueprint(home_bp)
 
-app.static_folder = 'app/static'
-app.template_folder='app/templates'
+app.static_folder = 'static'
+app.template_folder='templates'
 
  
 if __name__ == '__main__':

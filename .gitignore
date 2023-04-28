@@ -8,3 +8,4 @@ Dockerfile
 app\jiraModule\components\jiraCredential.env
 GDRBack
 /source/.env
+.vscode
