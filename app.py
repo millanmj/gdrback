@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_cors import CORS
-from source.jiraModule.components.getAllProjects.view_getAllProjects import getAllProjects_bp
-from source.jiraModule.components.test.test import test_bp
-from source.jiraModule.components.createIssue.view_createIssue import createIssue_bp
-from source.jiraModule.components.getIssues.getIssues import getIssues_bp
-from source.jiraModule.components.getIssueForID.getIssueForID import getIssueForID_bp
-from source.jiraModule.components.home.home import home_bp
+from app.jiraModule.components.getAllProjects.view_getAllProjects import getAllProjects_bp
+from app.jiraModule.components.test.test import test_bp
+from app.jiraModule.components.createIssue.view_createIssue import createIssue_bp
+from app.jiraModule.components.getIssues.getIssues import getIssues_bp
+from app.jiraModule.components.getIssueForID.getIssueForID import getIssueForID_bp
+from app.jiraModule.components.home.home import home_bp
 
 
 
@@ -24,4 +24,4 @@ app.template_folder='app/templates'
 
  
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
