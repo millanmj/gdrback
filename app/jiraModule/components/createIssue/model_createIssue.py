@@ -1,4 +1,4 @@
-from app.jiraModule.utils.conexion.db import Base
+# from app.jiraModule.utils.conexion.db import Base
 from sqlalchemy import Column, Integer, String
 
 class Issue:
@@ -46,20 +46,20 @@ class Issue:
         repr : str = f"<{self.__class__.__name__}({attrs_str})>"
         return repr
 
-class IDRequerimientos(Base):
-    __tablename__ = 'GDR_REQUERIMIENTOS'
+# class IDRequerimientos(Base):
+#     __tablename__ = 'GDR_REQUERIMIENTOS'
     
-    id_req = Column(Integer, primary_key=True)
-    titulo = Column(String(80), unique=True, nullable=False)
-    descripcion = Column(String(120), unique=True, nullable=False)
+#     id_req = Column(Integer, primary_key=True)
+#     titulo = Column(String(80), unique=True, nullable=False)
+#     descripcion = Column(String(120), unique=True, nullable=False)
 
-    def __init__(self, id_req, titulo, descripcion):
-        self.id_req = id_req
-        self.titulo = titulo
-        self.descripcion = descripcion
+#     def __init__(self, id_req, titulo, descripcion):
+#         self.id_req = id_req
+#         self.titulo = titulo
+#         self.descripcion = descripcion
             
-    def __str__(self):
-        return self.id_req
+#     def __str__(self):
+#         return self.id_req
     
-    def __repr__(self):
-        return '<id_req %r>' % self.id_req    
+#     def __repr__(self):
+#         return '<id_req %r>' % self.id_req    
