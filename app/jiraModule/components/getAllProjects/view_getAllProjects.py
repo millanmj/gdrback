@@ -10,6 +10,6 @@ def GetProjects() -> json:
     initiatives: list = []
     projects: list = []
     projects = controller_getAllProjects.getAllProjects()
-    initiatives = controller_getAllProjects.getInitiatives()
+    #initiatives = controller_getAllProjects.getInitiatives()
     # return jsonify({"projects":projects}, {"initiatives":initiatives})
     return jsonify({"projects":projects})
