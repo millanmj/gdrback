@@ -2,17 +2,17 @@ from flask import jsonify
 from jira import JIRA
 from app.modules.filtros import filtrarProyectos
 from app.settings.settings import settings
-# from app.jiraModule.utils.conexion.conexion import Conexion
-# from app.jiraModule.utils.conexion.db import engine
-# from app.jiraModule.utils.conexion.db import Base
-# from app.jiraModule.utils.conexion import db
-# from app.jiraModule.components.getAllProjects.model_GDR import GDR
+from app.jiraModule.utils.conexion.conexion import Conexion
+from app.jiraModule.utils.conexion.db import engine
+from app.jiraModule.utils.conexion.db import Base
+from app.jiraModule.utils.conexion import db
+from app.jiraModule.components.getAllProjects.model_GDR import GDR
 
 ENVIROMENT: str = settings.ENVIROMENT
 domain: str = settings.DOMAIN
 mail: str = settings.MAIL
 tokenId: str = settings.APIKEY
-# conexion = Conexion()
+conexion = Conexion()
 
 
 def getInitiatives()->list:
