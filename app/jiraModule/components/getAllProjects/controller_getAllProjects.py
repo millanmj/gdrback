@@ -47,21 +47,26 @@ def getAllProjects() -> list:
     un diccionario con los mismos.
     
     '''
-    print('esto es getallprojects controllers')
-    jiraOptions ={'server': "https://"+domain+".atlassian.net"}
-    jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
-    data: list=[]
-    projectInfo: dict = {'name': str, 'key': str}
+    try:
+        print('esto es getallprojects controllers')
+        jiraOptions ={'server': "https://"+domain+".atlassian.net"}
+        jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
+        data: list=[]
+        projectInfo: dict = {'name': str, 'key': str}
+        
+        projects = jira.projects()
     
-    projects = jira.projects()
-   
-    for project in projects:
-        projectInfo['key']= (project.key)
-        projectInfo['name']= (project.name)
-        data.append(projectInfo)
-        projectInfo = {}
+        for project in projects:
+            projectInfo['key']= (project.key)
+            projectInfo['name']= (project.name)
+            data.append(projectInfo)
+            projectInfo = {}
 
-    data = filtrarProyectos(data)
-    sorted(data, key=lambda name: max(list(name.values())))    
-    print(data)
+        data = filtrarProyectos(data)
+        sorted(data, key=lambda name: max(list(name.values())))    
+        print(data)
+        
+    except Exception as e: 
+        print(f'OCurrio un error en la ejecución de obtener proyectos: {e}')
+    
     return data

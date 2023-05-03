@@ -9,7 +9,11 @@ getAllProjects_bp = Blueprint("getAllProjects_bp", __name__)
 def GetProjects() -> json:   
     initiatives: list = []
     projects: list = []
-    projects = controller_getAllProjects.getAllProjects()
-    #initiatives = controller_getAllProjects.getInitiatives()
-    # return jsonify({"projects":projects}, {"initiatives":initiatives})
+    try:
+        projects = controller_getAllProjects.getAllProjects()
+        #initiatives = controller_getAllProjects.getInitiatives()
+        # return jsonify({"projects":projects}, {"initiatives":initiatives})
+    except Exception as e:
+        print(f'OCurrio un error en la ejecución de obtener proyectos: {e}')
+        
     return jsonify({"projects":projects})
