@@ -7,8 +7,6 @@ from app.jiraModule.components.getIssues.getIssues import getIssues_bp
 from app.jiraModule.components.getIssueForID.getIssueForID import getIssueForID_bp
 from app.jiraModule.components.home.home import home_bp
 
-
-
 app = Flask(__name__)
 cors = CORS(app)  
 app.url_map.strict_slashes = False
