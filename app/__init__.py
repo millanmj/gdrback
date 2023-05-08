@@ -8,7 +8,7 @@
 # from app.jiraModule.components.home.home import home_bp
 
 
-
+##comentario
 # app = Flask(__name__)
 # cors = CORS(app)  
 # app.url_map.strict_slashes = False
