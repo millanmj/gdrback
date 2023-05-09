@@ -1,4 +1,4 @@
-from app.settings.settings import settings
+from source.settings.settings import settings
 from jira import JIRA
 from flask import request
 

@@ -1,6 +1,6 @@
 from flask import render_template
-from app import app, db
-from components.getAllProjects import GDR
+from source import app, db
+from source.jiraModule.components.getAllProjects import GDR
 
 
 @app.route('/gdr')

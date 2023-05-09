@@ -1,6 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
-from app.settings.settings import settings
+from source.settings.settings import settings
 
 class Conexion:
     

@@ -7,8 +7,6 @@
 # from app.jiraModule.components.getIssueForID.getIssueForID import getIssueForID_bp
 # from app.jiraModule.components.home.home import home_bp
 
-
-##comentario
 # app = Flask(__name__)
 # cors = CORS(app)  
 # app.url_map.strict_slashes = False
@@ -24,19 +22,7 @@
 
  
 # if __name__ == '__main__':
-#     app.run()
-    
-    
-
-
-
- 
-# # from flask_sqlalchemy import SQLAlchemy
-# # from flask import Flask
-
-# # from app.jiraModule.utils.conexion.conexion import Conexion
-
-# # app = Flask(__name__)
-# # app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql://mmillan:123456@172.17.12.216/pnet'
-# # db = SQLAlchemy(app)
-# # conexion = Conexion()
+#     try:    
+#         app.run()
+#     except Exception as e:
+#         print(f'Ocurrio un error en la ejecución: {e}') 

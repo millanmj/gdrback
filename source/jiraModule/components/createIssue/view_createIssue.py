@@ -1,13 +1,13 @@
 from jira import JIRA
 import requests
-from app.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
-from app.jiraModule.utils.conexion.conexion import Conexion
+from source.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
+from source.jiraModule.utils.conexion.conexion import Conexion
 from flask import Blueprint, jsonify, request
 import json
-from app.jiraModule.utils.conexion import conexion
-from app.settings.settings import settings
-from app.jiraModule.utils.conexion import jiraConectionServices
-from app.jiraModule.components.createIssue import controller_createIssue
+from source.jiraModule.utils.conexion import conexion
+from source.settings.settings import settings
+from source.jiraModule.utils.conexion import jiraConectionServices
+from source.jiraModule.components.createIssue import controller_createIssue
 
 
 

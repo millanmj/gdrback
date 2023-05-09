@@ -1,6 +1,6 @@
 import json
 from flask import Blueprint, jsonify
-from app.jiraModule.components.getAllProjects import controller_getAllProjects
+from source.jiraModule.components.getAllProjects import controller_getAllProjects
 
 
 getAllProjects_bp = Blueprint("getAllProjects_bp", __name__)

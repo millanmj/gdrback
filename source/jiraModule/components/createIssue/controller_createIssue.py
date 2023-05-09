@@ -1,16 +1,16 @@
 import json, requests, re
 from flask import jsonify
-from app.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
-from app.jiraModule.utils.conexion.jiraConectionServices import JiraService
-from app.jiraModule.components.createIssue.model_createIssue import IDRequerimientos
-from app.jiraModule.utils.conexion.conexion import Conexion
-from app.jiraModule.utils.conexion.db import engine
-from app.jiraModule.utils.conexion.db import Base
-from app.jiraModule.utils.conexion import db
+from source.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
+from source.jiraModule.utils.conexion.jiraConectionServices import JiraService
+from source.jiraModule.components.createIssue.model_createIssue import IDRequerimientos
+from source.jiraModule.utils.conexion.conexion import Conexion
+from source.jiraModule.utils.conexion.db import engine
+from source.jiraModule.utils.conexion.db import Base
+from source.jiraModule.utils.conexion import db
 from sqlalchemy import desc
-from app.jiraModule.utils.conexion import jiraConectionServices
-from app.settings.settings import settings
-from app.modules.obtenerIdRequerimiento import get_req_id
+from source.jiraModule.utils.conexion import jiraConectionServices
+from source.settings.settings import settings
+from source.modules.obtenerIdRequerimiento import get_req_id
 
 jiraServices = JiraService()
 conexion = Conexion()
