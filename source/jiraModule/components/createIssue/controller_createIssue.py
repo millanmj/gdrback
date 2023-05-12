@@ -109,14 +109,8 @@ def createIssue(dataIssue: dict) -> json:
         jira = jiraServices.getConection()
         idUltimoRequerimiento: str = ''
         idUltimoRequerimiento = getlastIssueReq()    
-        print(idUltimoRequerimiento)
-        # newIssue: Issue = None
-        # input('por crear issue')
-
-        # # newIssue = Issue(dataIssue)
-        # print('----------------------------------------------------------------')    
-        # print(newIssue)        
-        # print('----------------------------------------------------------------')
+        print(f'Este es el id del ultimo requerimiento: {idUltimoRequerimiento}')
+ 
         
         #CAMPOS MINIMOS NECESARIOS PARA CREAR EL REQUERIMIENTO EN JIRA
         issueDict = {
@@ -125,15 +119,16 @@ def createIssue(dataIssue: dict) -> json:
                         "description": 'Rol: '+ dataIssue['managment']+ '\n'+ 'Funcionalidad: '+dataIssue['description']
                                         +'\n'+ 'Beneficio: '+ dataIssue['impact'] + 'Enlace a la Documentación: '
                                         + dataIssue['attached'], #+ '\n Iniciativa: '+ dataIssue['initiative'],        
-                        "priority": {"id":dataIssue['priority']}
+                        "priority": {"id":dataIssue['priority']},
+                        "issuetype": {"id":"10001"}
                     }   
         
         MapeoDeRequerimientos(dataIssue, issueDict, jiraServices.getEnviroment())
        
         try:       
-            ##Descomentar para crear un requerimiento en JIRA
+            ##Descomentar para crear un requerimiento en JIRA            
             newIssue = jira.create_issue(fields=issueDict)
-            print('creando requerimiento')
+            print(f'creando requerimiento: {newIssue}')
             
         except Exception as e:
             print(f"Error al crear el issue en JIRA: {e}")
