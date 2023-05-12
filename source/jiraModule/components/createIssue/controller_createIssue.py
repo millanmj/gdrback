@@ -11,6 +11,9 @@ from sqlalchemy import desc
 from source.jiraModule.utils.conexion import jiraConectionServices
 from source.settings.settings import settings
 from source.modules.obtenerIdRequerimiento import get_req_id
+from source.jiraModule.components.createIssue.model_createIssue import Issue
+
+
 
 jiraServices = JiraService()
 conexion = Conexion()
@@ -18,27 +21,6 @@ ENVIROMENT: str = settings.ENVIROMENT
 domain: str = settings.DOMAIN
 mail: str = settings.MAIL
 tokenId: str = settings.APIKEY
-
-
-def getLastIssueID() -> int:
-    '''
-    Pos: Obtiene el id del ultimo requerimiento en la tabla.
-    '''
-    try:
-        Base.metadata.create_all(engine)    
-        consulta = db.session.query(IDRequerimientos).order_by(desc(IDRequerimientos.id_req))
-    
-        ultimo_resultado = consulta.first()
-
-        if ultimo_resultado:
-            return ultimo_resultado.id_req
-        else:
-            # Si no hay registros en la tabla, retornar 0 o cualquier otro valor que sea apropiado para tu caso de uso.
-            return 0
-
-    except Exception as e:
-        print(f'OCurrio un error en la ejecución de crear requerimiento: {e}')
-        return -1  # O cualquier otro valor que indique un error en la consulta.
 
 
 def getlastIssue():
@@ -128,21 +110,30 @@ def createIssue(dataIssue: dict) -> json:
         idUltimoRequerimiento: str = ''
         idUltimoRequerimiento = getlastIssueReq()    
         print(idUltimoRequerimiento)
+        # newIssue: Issue = None
+        # input('por crear issue')
+
+        # # newIssue = Issue(dataIssue)
+        # print('----------------------------------------------------------------')    
+        # print(newIssue)        
+        # print('----------------------------------------------------------------')
         
         #CAMPOS MINIMOS NECESARIOS PARA CREAR EL REQUERIMIENTO EN JIRA
         issueDict = {
                         "project": dataIssue['key'],
                         "summary": '[REQ '+ idUltimoRequerimiento+'] ' + dataIssue['summary'],
                         "description": 'Rol: '+ dataIssue['managment']+ '\n'+ 'Funcionalidad: '+dataIssue['description']
-                                        +'\n'+ 'Beneficio: '+ dataIssue['impact'] + '\n Enlace a la Documentación: '
-                                        + dataIssue['attached'] + '\n Iniciativa: ' + dataIssue['initiative'],        
+                                        +'\n'+ 'Beneficio: '+ dataIssue['impact'] + 'Enlace a la Documentación: '
+                                        + dataIssue['attached'], #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                         "priority": {"id":dataIssue['priority']}
                     }   
         
         MapeoDeRequerimientos(dataIssue, issueDict, jiraServices.getEnviroment())
-    
-        try:
+       
+        try:       
+            ##Descomentar para crear un requerimiento en JIRA
             newIssue = jira.create_issue(fields=issueDict)
+            print('creando requerimiento')
             
         except Exception as e:
             print(f"Error al crear el issue en JIRA: {e}")
@@ -152,15 +143,15 @@ def createIssue(dataIssue: dict) -> json:
 
         #jira.add_attachment(issue=new_issue, attachment='C:/Users/Colaborador/Documents/logo-icon.png')
 
-    
-    
+       
     
     
         #Formateo el enlace al requerimiento
         link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
         
     except Exception as e:
-        print(f'OCurrio un error en la ejecución de crear requerimiento: {e}')    
-           
+        print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
+    
+  
     return jsonify({"link":link, "key":newIssue.key})
   
