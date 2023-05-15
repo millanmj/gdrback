@@ -1,660 +1,347 @@
-2023-05-08T17:23:37  Welcome, you are now connected to log-streaming service.
+esponse text = {"errorMessages":[],"errors":{"issuetype":"Especifica un tipo de incidencia v??lido"}}
+2023-05-12T15:44:14.255389878Z: [INFO]  OCurrio un error en la ejecuci??n de crear requerimiento: local variable 'newIssue' referenced before assignment
+2023-05-12T15:44:14.255393816Z: [INFO]  169.254.129.1 - - [12/May/2023:15:44:14 +0000] "POST /CreateIssue HTTP/1.1" 500 265 "-" "PostmanRuntime/7.32.2"
+
+
+[0:49 p. m., 12/5/2023] Jony Prome: 2023-05-12T15:48:56  Welcome, you are now connected to log-streaming service.
 
 Starting Log Tail -n 10 of existing logs ----
 
-/home/LogFiles/__lastCheckTime.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)
-05/08/2023 17:23:27
-
-
-/home/LogFiles/kudu/deployment/30df7c90367d-9b8b4a0e-ee52-4f70-99c7-a6a1418e175b.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/30df7c90367d-9b8b4a0e-ee52-4f70-99c7-a6a1418e175b.txt)
-2023-03-23T16:57:37  Parsing the build logs
-2023-03-23T16:57:37  Found 0 issue(s)
-2023-03-23T16:57:38  
-2023-03-23T16:57:38  Build Summary :
-2023-03-23T16:57:38  ===============
-2023-03-23T16:57:38  Errors (0)
-2023-03-23T16:57:38  Warnings (0)
-2023-03-23T16:57:38  
-2023-03-23T16:57:38  Triggering recycle (preview mode disabled).
-2023-03-23T16:57:38  Deployment successful. deployer =  deploymentPath =
-
-
-/home/LogFiles/kudu/deployment/48a01d50a96c-23f1a25f-afca-46d3-ab08-11ee79e50c10.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/48a01d50a96c-23f1a25f-afca-46d3-ab08-11ee79e50c10.txt)
-2023-03-16T16:07:07  Parsing the build logs
-2023-03-16T16:07:07  Found 0 issue(s)
-2023-03-16T16:07:07  
-2023-03-16T16:07:07  Build Summary :
-2023-03-16T16:07:07  ===============
-2023-03-16T16:07:07  Errors (0)
-2023-03-16T16:07:08  Warnings (0)
-2023-03-16T16:07:08  
-2023-03-16T16:07:08  Triggering recycle (preview mode disabled).
-2023-03-16T16:07:08  Deployment successful. deployer =  deploymentPath =
-
-
-/home/LogFiles/kudu/deployment/48a01d50a96c-264ba2b4-36c7-4555-aa04-4722360468f3.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/48a01d50a96c-264ba2b4-36c7-4555-aa04-4722360468f3.txt)
-2023-03-16T15:17:49  An unknown error has occurred. Check the diagnostic log for details.
-2023-03-16T15:17:50  An unknown error has occurred. Check the diagnostic log for details.
-
-
-/home/LogFiles/kudu/deployment/9038be54db39-bcc87888-4885-484c-8012-9a80865cc69f.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/9038be54db39-bcc87888-4885-484c-8012-9a80865cc69f.txt)
-2023-03-14T15:57:11  Parsing the build logs
-2023-03-14T15:57:11  Found 0 issue(s)
-2023-03-14T15:57:11  
-2023-03-14T15:57:12  Build Summary :
-2023-03-14T15:57:12  ===============
-2023-03-14T15:57:12  Errors (0)
-2023-03-14T15:57:12  Warnings (0)
-2023-03-14T15:57:12  
-2023-03-14T15:57:12  Triggering recycle (preview mode disabled).
-2023-03-14T15:57:13  Deployment successful. deployer =  deploymentPath =
-
-
-/home/LogFiles/kudu/deployment/ddf47c163e6c-408835ea-2172-48ed-a03d-800095c294d4.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/ddf47c163e6c-408835ea-2172-48ed-a03d-800095c294d4.txt)
-2023-03-14T14:51:21  Parsing the build logs
-2023-03-14T14:51:21  Found 0 issue(s)
-2023-03-14T14:51:21  
-2023-03-14T14:51:21  Build Summary :
-2023-03-14T14:51:21  ===============
-2023-03-14T14:51:22  Errors (0)
-2023-03-14T14:51:22  Warnings (0)
-2023-03-14T14:51:22  
-2023-03-14T14:51:22  Triggering recycle (preview mode disabled).
-2023-03-14T14:51:22  Deployment successful. deployer =  deploymentPath =
-
-
-/home/LogFiles/kudu/deployment/ddf47c163e6c-97dd828e-c332-49e6-b387-6bf8bf7e310c.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/ddf47c163e6c-97dd828e-c332-49e6-b387-6bf8bf7e310c.txt)
-2023-03-14T14:58:40    Done in 0 sec(s).
-2023-03-14T14:58:40    
-2023-03-14T14:58:40    Source directory     : /tmp/8db249c938ad154
-2023-03-14T14:58:40    Destination directory: /home/site/wwwroot
-2023-03-14T14:58:40    
-2023-03-14T14:58:40    Python Version: /tmp/oryx/platforms/python/3.10.8/bin/python3.10
-2023-03-14T14:58:40    Creating directory for command manifest file if it does not exist
-2023-03-14T14:58:40    Removing existing manifest file
-2023-03-14T14:58:40    Python Virtual Environment: antenv
-2023-03-14T14:58:41    Creating virtual environment...
-
-
-/home/LogFiles/kudu/deployment/e1b405b42170-d64e40bf-d8d5-45c3-bd70-8aa010f53496.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/e1b405b42170-d64e40bf-d8d5-45c3-bd70-8aa010f53496.txt)
-2023-03-23T12:25:58  Parsing the build logs
-2023-03-23T12:25:58  Found 0 issue(s)
-2023-03-23T12:25:58  
-2023-03-23T12:25:58  Build Summary :
-2023-03-23T12:25:58  ===============
-2023-03-23T12:25:58  Errors (0)
-2023-03-23T12:25:59  Warnings (0)
-2023-03-23T12:25:59  
-2023-03-23T12:25:59  Triggering recycle (preview mode disabled).
-2023-03-23T12:25:59  Deployment successful. deployer =  deploymentPath =
-
+/appsvctmp/volatile/logs/runtime/943a1e1a60f1938729047ffe19e13c5caa05e94d409c51ab5f7f00b442ea0d20.log 
+2023-05-12T15:44:14.255311080Z: [INFO]  Requerimiento encontrado: 324
+2023-05-12T15:44:14.255323253Z: [INFO]  325
+2023-05-12T15:44:14.255328272Z: [INFO]  None
+2023-05-12T15:44:14.255332550Z: [INFO]  data en funcion {'summary': 'Prueba carga requerimiento pre producci??n', 'key': 'GDD', 'description': 'completar', 'type': 'Tarea', 'approvers': 'Juan Carlos Canepa', 'managment': 'algo', 'impact': " + '\n Enlace a la Documentaci??n: ", 'attached': '', 'priority': '1', 'initiative': 'iniciativa'}
+2023-05-12T15:44:14.255338231Z: [INFO]  E…
+[0:49 p. m., 12/5/2023] Jony Prome: es lo unico que hay
+[0:50 p. m., 12/5/2023] max: que raro
+[0:50 p. m., 12/5/2023] max: y lo que staba antes se borro?
+[0:50 p. m., 12/5/2023] Jony Prome: Y si
+[0:50 p. m., 12/5/2023] Jony Prome: Siempre que haces un push
+[0:50 p. m., 12/5/2023] Jony Prome: Sino se hace un log infinito
+[0:50 p. m., 12/5/2023] max: y ahora no salio
+[0:50 p. m., 12/5/2023] max: ah si mira la ultima linea
+[0:50 p. m., 12/5/2023] max: pero faltan coasas
+[0:51 p. m., 12/5/2023] max: me sirve
+[2:33 p. m., 12/5/2023] max: otro log -.-
+[2:33 p. m., 12/5/2023] max: por favor
+[2:33 p. m., 12/5/2023] Jony Prome: despues de 97 min sin actividad
+[2:33 p. m., 12/5/2023] Jony Prome: 2023-05-12T17:26:17.299343584Z: [INFO]  169.254.129.1 - - [12/May/2023:17:26:17 +0000] "GET / HTTP/1.1" 200 10943 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
-/home/LogFiles/kudu/deployment/ec97b006fbd2-2ff9a67a-d313-4143-ab26-2f1cc16f2b5e.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/ec97b006fbd2-2ff9a67a-d313-4143-ab26-2f1cc16f2b5e.txt)
-2023-03-14T15:34:00  Parsing the build logs
-2023-03-14T15:34:00  Found 0 issue(s)
-2023-03-14T15:34:00  
-2023-03-14T15:34:00  Build Summary :
-2023-03-14T15:34:00  ===============
-2023-03-14T15:34:00  Errors (0)
-2023-03-14T15:34:01  Warnings (0)
-2023-03-14T15:34:01  
-2023-03-14T15:34:01  Triggering recycle (preview mode disabled).
-2023-03-14T15:34:01  Deployment successful. deployer =  deploymentPath =
+2023-05-12T17:26:17.556411781Z: [INFO]  169.254.129.1 - - [12/May/2023:17:26:17 +0000] "GET /static/css/style.css HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
+2023-05-12T17:26:17.939623658Z: [INFO]  169.254.129.1 - - [12/May/2023:17:26:17 +0000] "GET /static/assets/renderGestor.png HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
-/home/LogFiles/kudu/deployment/ec97b006fbd2-34c7a758-f950-428c-a67a-ca877084be69.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/ec97b006fbd2-34c7a758-f950-428c-a67a-ca877084be69.txt)
-2023-03-14T15:29:21  Parsing the build logs
-2023-03-14T15:29:21  Found 0 issue(s)
-2023-03-14T15:29:22  
-2023-03-14T15:29:22  Build Summary :
-2023-03-14T15:29:22  ===============
-2023-03-14T15:29:22  Errors (0)
-2023-03-14T15:29:22  Warnings (0)
-2023-03-14T15:29:22  
-2023-03-14T15:29:22  Triggering recycle (preview mode disabled).
-2023-03-14T15:29:22  Deployment successful. deployer =  deploymentPath =
+2023-05-12T17:26:17.946041425Z: [INFO]  169.254.129.1 - - [12/May/2023:17:26:17 +0000] "GET /static/assets/triangulosbackII@4x.png HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/static/css/style.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
+2023-05-12T17:26:51.128332070Z: [INFO]  169.254.129.1 - - [12/May/2023:17:26:51 +0000] "GET /static/assets/favicon.ico HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
-/home/LogFiles/kudu/deployment/ec97b006fbd2-48dd400f-1164-4657-a33f-9ce74483fee2.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/ec97b006fbd2-48dd400f-1164-4657-a33f-9ce74483fee2.txt)
-2023-03-14T15:36:10  Parsing the build logs
-2023-03-14T15:36:10  Found 0 issue(s)
-2023-03-14T15:36:10  
-2023-03-14T15:36:10  Build Summary :
-2023-03-14T15:36:10  ===============
-2023-03-14T15:36:11  Errors (0)
-2023-03-14T15:36:11  Warnings (0)
-2023-03-14T15:36:11  
-2023-03-14T15:36:11  Triggering recycle (preview mode disabled).
-2023-03-14T15:36:11  Deployment successful. deployer =  deploymentPath =
+2023-05-12T17:27:33.607820758Z: [INFO]     ___                               
 
+2023-05-12T17:27:33.607849984Z: [INFO]    /  _  \ ____ ___   __  
 
-/home/LogFiles/kudu/deployment/ec97b006fbd2-59fa21ca-b333-441b-a587-e47038993cb6.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/deployment/ec97b006fbd2-59fa21ca-b333-441b-a587-e47038993cb6.txt)
-2023-03-14T15:39:03  Parsing the build logs
-2023-03-14T15:39:03  Found 0 issue(s)
-2023-03-14T15:39:04  
-2023-03-14T15:39:04  Build Summary :
-2023-03-14T15:39:04  ===============
-2023-03-14T15:39:04  Errors (0)
-2023-03-14T15:39:04  Warnings (0)
-2023-03-14T15:39:04  
-2023-03-14T15:39:05  Triggering recycle (preview mode disabled).
-2023-03-14T15:39:05  Deployment successful. deployer =  deploymentPath =
+2023-05-12T17:27:33.607855104Z: [INFO]   /  /\  \\_   /  |  \  _ \/ __ \ 
 
+2023-05-12T17:27:33.607859412Z: [INFO]  /    |    \/    /|  |  /|  | \/\  _/ 
 
-/home/LogFiles/kudu/trace/15e99645edf6-f0e469f4-2578-4690-99ea-46267798ed62.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/15e99645edf6-f0e469f4-2578-4690-99ea-46267798ed62.txt)
-2023-03-13T19:19:54  Startup Request, url: /api/deployments/?api-version=2018-11-01, method: GET, type: request, pid: 77,1,4, ScmType: GitHubAction, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:33.607863260Z: [INFO]  \__|_  /__ \__/ |_|    \__  >
 
+2023-05-12T17:27:33.607867228Z: [INFO]          \/      \/                  \/ 
 
-/home/LogFiles/kudu/trace/1c3657423005-2aae41e7-3c50-44d4-bb82-2a7e1c756fb2.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/1c3657423005-2aae41e7-3c50-44d4-bb82-2a7e1c756fb2.txt)
-2023-03-28T12:25:33  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,13, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:33.607870925Z: [INFO]  A P P   S E R V I C E   O N   L I N U X
 
+2023-05-12T17:27:33.607874331Z: [INFO]  
 
-/home/LogFiles/kudu/trace/1eac7d0567a8-3b2f8db1-8376-48a1-81c0-ae73c84d29e0.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/1eac7d0567a8-3b2f8db1-8376-48a1-81c0-ae73c84d29e0.txt)
-2023-04-10T14:05:35  Startup Request, url: /api/settings, method: GET, type: request, pid: 78,1,4, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:33.607955338Z: [INFO]  Documentation: http://aka.ms/webapp-linux
 
+2023-05-12T17:27:33.607963284Z: [INFO]  Python 3.10.10
 
-/home/LogFiles/kudu/trace/273b529f692a-c8818286-e02c-4d87-82be-12219afc8ae9.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/273b529f692a-c8818286-e02c-4d87-82be-12219afc8ae9.txt)
-2023-03-28T12:49:40  Startup Request, url: /api/deployments/?api-version=2018-11-01, method: GET, type: request, pid: 77,1,18, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:33.607967522Z: [INFO]  Note: Any data outside '/home' is not persisted
 
+2023-05-12T17:27:34.295924067Z: [INFO]  Starting OpenBSD Secure Shell server: sshd.
 
-/home/LogFiles/kudu/trace/28a4e447e24b-68df2693-aa78-41a2-a0fe-e59e21298757.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/28a4e447e24b-68df2693-aa78-41a2-a0fe-e59e21298757.txt)
-2023-04-28T17:16:10  Startup Request, url: /api/logstream, method: GET, type: request, pid: 78,1,5, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:34.353718483Z: [INFO]  App Command Line not configured, will attempt auto-detect
 
+2023-05-12T17:27:34.470223112Z: [INFO]  Starting periodic command scheduler: cron.
 
-/home/LogFiles/kudu/trace/2dd37a1abfd0-4fbdc18a-01f0-4d37-abc8-9a0625660315.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/2dd37a1abfd0-4fbdc18a-01f0-4d37-abc8-9a0625660315.txt)
-2023-04-28T14:01:57  Startup Request, url: /, method: GET, type: request, pid: 77,1,12, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:34.470745103Z: [INFO]  Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
 
+2023-05-12T17:27:34.517344009Z: [INFO]  Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
 
-/home/LogFiles/kudu/trace/30df7c90367d-325a708f-20a1-4d0b-8ce7-c710cc702882.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/30df7c90367d-325a708f-20a1-4d0b-8ce7-c710cc702882.txt)
-2023-03-23T15:06:16  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,12, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:34.519824813Z: [INFO]  Build Operation ID: a03ce67d803aa6ca
 
+2023-05-12T17:27:34.520848398Z: [INFO]  Oryx Version: 0.2.20230322.1, Commit: 6c04ec75685b441c9378c238b6491cf9812313db, ReleaseTagName: 20230322.1
 
-/home/LogFiles/kudu/trace/34e64cc6d7f1-d2a136d7-df01-4ebd-8c2e-94a672a09358.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/34e64cc6d7f1-d2a136d7-df01-4ebd-8c2e-94a672a09358.txt)
-2023-03-28T14:59:59  Startup Request, url: /, method: GET, type: request, pid: 77,1,12, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:34.520882454Z: [ERROR]  Output is compressed. Extracting it...
 
+2023-05-12T17:27:34.533056160Z: [ERROR]  Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8db530e0bf8ec27'...
 
-/home/LogFiles/kudu/trace/404113eaf109-1febc6f7-3f29-430b-9466-1eadcab8c8ae.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/404113eaf109-1febc6f7-3f29-430b-9466-1eadcab8c8ae.txt)
-2023-05-08T17:16:21  Startup Request, url: /, method: GET, type: request, pid: 78,1,7, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:35.565775873Z: [ERROR]  App path is set to '/tmp/8db530e0bf8ec27'
 
+2023-05-12T17:27:36.285786871Z: [ERROR]  Detected an app based on Flask
 
-/home/LogFiles/kudu/trace/48a01d50a96c-264ba2b4-36c7-4555-aa04-4722360468f3.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/48a01d50a96c-264ba2b4-36c7-4555-aa04-4722360468f3.txt)
-2023-03-16T15:17:48  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,4, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:36.285919337Z: [ERROR]  Generating `gunicorn` command for 'app:app'
 
+2023-05-12T17:27:36.335015838Z: [INFO]  Writing output script to '/opt/startup/startup.sh'
 
-/home/LogFiles/kudu/trace/4d1ae4d022ff-c2c68b21-e755-4966-b219-b3f850d44df7.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/4d1ae4d022ff-c2c68b21-e755-4966-b219-b3f850d44df7.txt)
-2023-05-03T16:46:59  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 76,1,5, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:36.562716045Z: [INFO]  Using packages from virtual environment antenv located at /tmp/8db530e0bf8ec27/antenv.
 
+2023-05-12T17:27:36.563279236Z: [INFO]  Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages'
 
-/home/LogFiles/kudu/trace/64bce16026f7-45201c5e-a100-4497-b797-f45e80ef8dcd.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/64bce16026f7-45201c5e-a100-4497-b797-f45e80ef8dcd.txt)
-2023-04-27T18:18:51  Startup Request, url: /api/settings, method: GET, type: request, pid: 78,1,6, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:37.214005770Z: [ERROR]  [2023-05-12 17:27:37 +0000] [70] [INFO] Starting gunicorn 20.1.0
 
+2023-05-12T17:27:37.235556076Z: [ERROR]  [2023-05-12 17:27:37 +0000] [70] [INFO] Listening at: http://0.0.0.0:8000 (70)
 
-/home/LogFiles/kudu/trace/6a31aaeffcec-0e23a654-0e62-4d6c-8093-63e0f61b5d6d.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/6a31aaeffcec-0e23a654-0e62-4d6c-8093-63e0f61b5d6d.txt)
-2023-04-11T20:20:49  Startup Request, url: /api/logstream, method: GET, type: request, pid: 78,1,4, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:27:37.235576325Z: [ERROR]  [2023-05-12 17:27:37 +0000] [70] [INFO] Using worker: sync
 
+2023-05-12T17:27:37.237860849Z: [ERROR]  [2023-05-12 17:27:37 +0000] [73] [INFO] Booting worker with pid: 73
 
-/home/LogFiles/kudu/trace/87d1dab13d6f-e7a4b673-8753-4b3b-a101-65350544a876.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/87d1dab13d6f-e7a4b673-8753-4b3b-a101-65350544a876.txt)
-2023-04-28T15:31:42  Startup Request, url: /api/logstream, method: GET, type: request, pid: 78,1,14, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:27:39.142275955Z: [INFO]  169.254.129.1 - - [12/May/2023:17:27:39 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
 
+2023-05-12T17:28:57  No new trace in the past 1 min(s).
+2023-05-12T17:29:57  No new trace in the past 2 min(s).
+2023-05-12T17:30:57  No new trace in the past 3 min(s).
+2023-05-12T17:31:57  No new trace in the past 4 min(s).
+2023-05-12T17:32:07.510907491Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:07 +0000] "GET / HTTP/1.1" 200 10943 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
-/home/LogFiles/kudu/trace/89c2c1929043-44992f88-808c-4ff8-beac-adcaceb7e6fe.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/89c2c1929043-44992f88-808c-4ff8-beac-adcaceb7e6fe.txt)
-2023-04-20T19:20:28  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 78,1,5, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:07.705666767Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:07 +0000] "GET /static/css/style.css HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
+2023-05-12T17:32:07.879623804Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:07 +0000] "GET /static/assets/renderGestor.png HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
-/home/LogFiles/kudu/trace/9038be54db39-27239e8c-c39a-4995-966a-20a101779a30.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/9038be54db39-27239e8c-c39a-4995-966a-20a101779a30.txt)
-2023-03-14T15:41:29  Startup Request, url: /api/logstream, method: GET, type: request, pid: 77,1,5, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:07.943326750Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:07 +0000] "GET /static/assets/triangulosbackII@4x.png HTTP/1.1" 200 0 "https://gdrback.azurewebsites.net/static/css/style.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
+2023-05-12T17:32:14.985627727Z: [INFO]  esto es getallprojects controllers
 
-/home/LogFiles/kudu/trace/97577d779594-a71c0bed-14c7-4cbb-a883-70557b8a2285.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/97577d779594-a71c0bed-14c7-4cbb-a883-70557b8a2285.txt)
-2023-04-28T13:37:45  Startup Request, url: /api/settings, method: GET, type: request, pid: 78,1,6, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:14.985668714Z: [INFO]  [{'key': 'GP0007', 'name': 'Nuevo workflow de colegiatura'}, {'key': 'SP000BN', 'name': 'Score prome '}, {'key': 'RDG', 'name': 'RendiciÃ³n de gastos'}, {'key': 'GDD', 'name': 'GestiÃ³n de la demanda'}, {'key': 'GT', 'name': 'GestiÃ³n de tecnologÃ­a'}]
 
+2023-05-12T17:32:14.985677430Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:14 +0000] "GET /GetAllProjects HTTP/1.1" 200 263 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
 
-/home/LogFiles/kudu/trace/979bed5f20ad-dd6e3d29-3ea0-47e8-bf61-8eaa9b09b7e8.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/979bed5f20ad-dd6e3d29-3ea0-47e8-bf61-8eaa9b09b7e8.txt)
-2023-03-27T18:52:18  Startup Request, url: /api/settings, method: GET, type: request, pid: 77,1,6, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768693868Z: [ERROR]  [2023-05-12 17:32:26,765] ERROR in app: Exception on /CreateIssue [POST]
 
+2023-05-12T17:32:26.768749923Z: [ERROR]  Traceback (most recent call last):
 
-/home/LogFiles/kudu/trace/9fdaba0094d5-ac179bcc-4303-4a37-aed7-d02cd6429406.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/9fdaba0094d5-ac179bcc-4303-4a37-aed7-d02cd6429406.txt)
-2023-04-11T20:14:01  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 78,1,4, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768757888Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
 
+2023-05-12T17:32:26.768763609Z: [ERROR]      response = self.full_dispatch_request()
 
-/home/LogFiles/kudu/trace/a76b17720843-2961cf21-783e-476e-b6c6-9ce9c3c47cf8.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/a76b17720843-2961cf21-783e-476e-b6c6-9ce9c3c47cf8.txt)
-2023-03-27T14:49:06  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,12, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:26.768769029Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
 
+2023-05-12T17:32:26.768773928Z: [ERROR]      rv = self.handle_user_exception(e)
 
-/home/LogFiles/kudu/trace/ac786650bbe6-52e84819-eca9-4f96-abe8-f91eb9a26e34.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ac786650bbe6-52e84819-eca9-4f96-abe8-f91eb9a26e34.txt)
-2023-03-27T14:54:18  Startup Request, url: /, method: GET, type: request, pid: 77,1,16, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768778226Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
 
+2023-05-12T17:32:26.768782915Z: [ERROR]      return cors_after_request(app.make_response(f(*args, **kwargs)))
 
-/home/LogFiles/kudu/trace/b71b2bccb602-5216ae34-c166-4b29-a990-c26328d1e5e6.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/b71b2bccb602-5216ae34-c166-4b29-a990-c26328d1e5e6.txt)
-2023-05-08T17:23:37  Startup Request, url: /api/logstream, method: GET, type: request, pid: 75,1,28, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768815135Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
 
+2023-05-12T17:32:26.768821126Z: [ERROR]      rv = self.dispatch_request()
 
-/home/LogFiles/kudu/trace/b8b161579eca-b00e2bee-d697-4cf6-9a69-4ec0f3b6d90a.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/b8b161579eca-b00e2bee-d697-4cf6-9a69-4ec0f3b6d90a.txt)
-2023-03-15T14:52:18  Startup Request, url: /api/logs/docker, method: GET, type: request, pid: 77,1,4, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:26.768825665Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
 
+2023-05-12T17:32:26.768829793Z: [ERROR]      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
 
-/home/LogFiles/kudu/trace/ddee7bde7cd5-2b44286d-fd18-4e28-8ae3-a3f72c2afe36.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ddee7bde7cd5-2b44286d-fd18-4e28-8ae3-a3f72c2afe36.txt)
-2023-04-12T13:49:34  Startup Request, url: /api/settings, method: GET, type: request, pid: 77,1,5, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768833920Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/view_createIssue.py", line 26, in CreateNewIssue
 
+2023-05-12T17:32:26.768838419Z: [ERROR]      response = controller_createIssue.createIssue(dataIssue)
 
-/home/LogFiles/kudu/trace/ddf47c163e6c-e98d07a3-a18e-4edc-acf4-86b3f23a1eea.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ddf47c163e6c-e98d07a3-a18e-4edc-acf4-86b3f23a1eea.txt)
-2023-03-14T14:50:32  Startup Request, url: /GdrBack.git/info/refs?service=git-receive-pack, method: GET, type: request, pid: 77,1,34, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768842587Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/controller_createIssue.py", line 151, in createIssue
 
+2023-05-12T17:32:26.768859729Z: [ERROR]      return jsonify({"link":link, "key":newIssue.key})
 
-/home/LogFiles/kudu/trace/e1b405b42170-82878347-3f46-44a2-87ff-53a9e5130f8f.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/e1b405b42170-82878347-3f46-44a2-87ff-53a9e5130f8f.txt)
-2023-03-23T12:24:50  Startup Request, url: /GdrBack.git/info/refs?service=git-receive-pack, method: GET, type: request, pid: 77,1,6, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.768863776Z: [ERROR]  UnboundLocalError: local variable 'link' referenced before assignment
 
+2023-05-12T17:32:26.770816262Z: [INFO]  No se encontrÃ³ el nÃºmero de requerimiento en el campo 'summary'.
 
-/home/LogFiles/kudu/trace/e866df087d9d-bc0c8fdb-c8ca-4430-a5ba-29654af8d76c.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/e866df087d9d-bc0c8fdb-c8ca-4430-a5ba-29654af8d76c.txt)
-2023-03-28T12:40:03  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,51, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.770838634Z: [INFO]  Requerimiento encontrado: 324
 
+2023-05-12T17:32:26.770844906Z: [INFO]  Este es el id del ultimo requerimiento: 325
 
-/home/LogFiles/kudu/trace/eaf3d40e0b58-a2531c45-78c4-4f7f-a6a9-ea9560584cff.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/eaf3d40e0b58-a2531c45-78c4-4f7f-a6a9-ea9560584cff.txt)
-2023-03-27T11:17:25  Startup Request, url: /GdrBack.git/info/refs?service=git-upload-pack, method: GET, type: request, pid: 77,1,7, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:26.770849604Z: [INFO]  None
 
+2023-05-12T17:32:26.770854504Z: [INFO]  data en funcion {'summary': 'Prueba carga requerimiento pre producciÃ³n', 'key': 'GDD', 'description': 'completar', 'type': 'Tarea', 'approvers': 'Juan Carlos Canepa', 'managment': 'algo', 'impact': " + '\n Enlace a la DocumentaciÃ³n: ", 'attached': '', 'priority': '1', 'initiative': 'iniciativa'}
 
-/home/LogFiles/kudu/trace/ec97b006fbd2-4072a452-b519-4a01-b4f3-2185b5b32069.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ec97b006fbd2-4072a452-b519-4a01-b4f3-2185b5b32069.txt)
-2023-03-14T15:19:53    Error occurred, type: error, text: Object reference not set to an instance of an object., stackTrace:    at Kudu.Contracts.Infrastructure.LockExtensions.LockOperationAsync(IOperationLock lockObj, Func`1 operation, String operationName, TimeSpan timeout)
-   at Kudu.Services.GitServer.ReceivePackHandlerMiddleware.Invoke(HttpContext context, ITracer tracer, IGitServer gitServer, IDictionary`2 namedLocks, IDeploymentManager deploymentManager, IRepositoryFactory repositoryFactory, IEnvironment environment)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
-   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context)
-2023-03-14T15:19:53      Outgoing response, type: response, statusCode: 400, statusText: BadRequest
+2023-05-12T17:32:26.770860235Z: [INFO]  Error al crear el issue en JIRA: JiraError HTTP 400 url: https://provinciamicroempresas.atlassian.net/rest/api/2/issue
 
+2023-05-12T17:32:26.770864733Z: [INFO]  	
 
-/home/LogFiles/kudu/trace/ec97b006fbd2-926441b8-672f-4988-8a57-d1a5111b8bce.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ec97b006fbd2-926441b8-672f-4988-8a57-d1a5111b8bce.txt)
-2023-03-14T15:01:40  Startup Request, url: /GdrBack.git/info/refs?service=git-receive-pack, method: GET, type: request, pid: 77,1,4, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:26.770869692Z: [INFO]  	response headers = {'Date': 'Fri, 12 May 2023 17:32:26 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '99e6065657b7b99dee8606b868bf55f4', 'X-Aaccountid': '6228d8734160640069ca5686', 'Cache-Control': 'no-cache, no-store, no-transform', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '8de0c958996bffda', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Transfer-Encoding': 'chunked'}
 
+2023-05-12T17:32:26.770880953Z: [INFO]  	response text = {"errorMessages":[],"errors":{"issuetype":"Especifica un tipo de incidencia vÃ¡lido"}}
 
-/home/LogFiles/kudu/trace/ec97b006fbd2-aee1e0b1-887f-4494-9428-b9504353458c.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ec97b006fbd2-aee1e0b1-887f-4494-9428-b9504353458c.txt)
-2023-03-14T15:21:50    Error occurred, type: error, text: Object reference not set to an instance of an object., stackTrace:    at Kudu.Contracts.Infrastructure.LockExtensions.LockOperationAsync(IOperationLock lockObj, Func`1 operation, String operationName, TimeSpan timeout)
-   at Kudu.Services.GitServer.ReceivePackHandlerMiddleware.Invoke(HttpContext context, ITracer tracer, IGitServer gitServer, IDictionary`2 namedLocks, IDeploymentManager deploymentManager, IRepositoryFactory repositoryFactory, IEnvironment environment)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
-   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context)
-2023-03-14T15:21:50      Outgoing response, type: response, statusCode: 400, statusText: BadRequest
+2023-05-12T17:32:26.770885912Z: [INFO]  Ocurrio un error en la ejecucion de crear requerimiento: local variable 'newIssue' referenced before assignment
 
+2023-05-12T17:32:26.770889840Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:26 +0000] "POST /CreateIssue HTTP/1.1" 500 265 "-" "PostmanRuntime/7.32.2"
 
-/home/LogFiles/kudu/trace/ec97b006fbd2-ec2e93df-650a-4af6-b93d-6a625cdbd639.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ec97b006fbd2-ec2e93df-650a-4af6-b93d-6a625cdbd639.txt)
-2023-03-14T15:01:42    Error occurred, type: error, text: Object reference not set to an instance of an object., stackTrace:    at Kudu.Contracts.Infrastructure.LockExtensions.LockOperationAsync(IOperationLock lockObj, Func`1 operation, String operationName, TimeSpan timeout)
-   at Kudu.Services.GitServer.ReceivePackHandlerMiddleware.Invoke(HttpContext context, ITracer tracer, IGitServer gitServer, IDictionary`2 namedLocks, IDeploymentManager deploymentManager, IRepositoryFactory repositoryFactory, IEnvironment environment)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
-   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context)
-2023-03-14T15:01:42      Outgoing response, type: response, statusCode: 400, statusText: BadRequest
+2023-05-12T17:32:31.529415789Z: [ERROR]  [2023-05-12 17:32:31,528] ERROR in app: Exception on /CreateIssue [POST]
 
+2023-05-12T17:32:31.529473717Z: [ERROR]  Traceback (most recent call last):
 
-/home/LogFiles/kudu/trace/f7b88aee4d4b-61765bf7-aaee-426a-85f3-1eb300b23924.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/f7b88aee4d4b-61765bf7-aaee-426a-85f3-1eb300b23924.txt)
-2023-04-28T17:15:59  Startup Request, url: /, method: GET, type: request, pid: 77,1,4, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:31.529480550Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
 
+2023-05-12T17:32:31.529485510Z: [ERROR]      response = self.full_dispatch_request()
 
-/home/LogFiles/kudu/trace/f91769a6e6e6-202f041a-bd2e-447d-b0e9-2ebfa36af198.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/f91769a6e6e6-202f041a-bd2e-447d-b0e9-2ebfa36af198.txt)
-2023-04-03T15:06:11  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,4, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:31.529489647Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
 
+2023-05-12T17:32:31.529493865Z: [ERROR]      rv = self.handle_user_exception(e)
 
-/home/LogFiles/kudu/trace/f95476113265-c63db033-e438-4fc9-8707-225efb1b12a2.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/f95476113265-c63db033-e438-4fc9-8707-225efb1b12a2.txt)
-2023-05-03T11:29:11  Startup Request, url: /api/settings, method: GET, type: request, pid: 77,1,6, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:31.529497752Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
 
+2023-05-12T17:32:31.529502020Z: [ERROR]      return cors_after_request(app.make_response(f(*args, **kwargs)))
 
-/home/LogFiles/kudu/trace/faf3cbd7a825-0d4f3ab8-7354-4dd5-8022-a8d96f810bb3.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/faf3cbd7a825-0d4f3ab8-7354-4dd5-8022-a8d96f810bb3.txt)
-2023-03-14T14:59:08  Startup Request, url: /GdrBack.git/info/refs?service=git-receive-pack, method: GET, type: request, pid: 77,1,13, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:31.529505998Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
 
+2023-05-12T17:32:31.529523220Z: [ERROR]      rv = self.dispatch_request()
 
-/home/LogFiles/kudu/trace/faf3cbd7a825-9766ebbc-d269-468e-aee2-59dc9ff5b911.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/faf3cbd7a825-9766ebbc-d269-468e-aee2-59dc9ff5b911.txt)
-2023-03-14T15:01:00    Error occurred, type: error, text: Object reference not set to an instance of an object., stackTrace:    at Kudu.Contracts.Infrastructure.LockExtensions.LockOperationAsync(IOperationLock lockObj, Func`1 operation, String operationName, TimeSpan timeout)
-   at Kudu.Services.GitServer.ReceivePackHandlerMiddleware.Invoke(HttpContext context, ITracer tracer, IGitServer gitServer, IDictionary`2 namedLocks, IDeploymentManager deploymentManager, IRepositoryFactory repositoryFactory, IEnvironment environment)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
-   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context)
-2023-03-14T15:01:00      Outgoing response, type: response, statusCode: 400, statusText: BadRequest
+2023-05-12T17:32:31.529527027Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
 
+2023-05-12T17:32:31.529530724Z: [ERROR]      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
 
-/home/LogFiles/kudu/trace/fe9bf28732f7-5ed56ab9-9252-4a91-b515-24f91f7afecf.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/fe9bf28732f7-5ed56ab9-9252-4a91-b515-24f91f7afecf.txt)
-2023-03-14T13:42:47  Startup Request, url: /api/deployments/?api-version=2018-11-01, method: GET, type: request, pid: 77,1,4, ScmType: GitHubAction, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:31.529534281Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/view_createIssue.py", line 26, in CreateNewIssue
 
+2023-05-12T17:32:31.529538338Z: [ERROR]      response = controller_createIssue.createIssue(dataIssue)
 
-/home/LogFiles/kudu/trace/ff74e821d69d-e3880070-f6a5-4a04-9e05-f18ef30bd208.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ff74e821d69d-e3880070-f6a5-4a04-9e05-f18ef30bd208.txt)
-2023-05-08T13:16:23  Startup Request, url: /api/settings, method: GET, type: request, pid: 77,1,5, SCM_DO_BUILD_DURING_DEPLOYMENT: 1, ScmType: LocalGit
+2023-05-12T17:32:31.529542496Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/controller_createIssue.py", line 151, in createIssue
 
+2023-05-12T17:32:31.529546534Z: [ERROR]      return jsonify({"link":link, "key":newIssue.key})
 
-/home/LogFiles/kudu/trace/ffda36814c28-ac55a398-241e-4952-a6a9-fdb999d000b7.txt  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/ffda36814c28-ac55a398-241e-4952-a6a9-fdb999d000b7.txt)
-2023-05-02T20:28:52  Startup Request, url: /api/deployments/?$orderby=ReceivedTime%20desc&$top=20&api-version=2022-03-01, method: GET, type: request, pid: 77,1,4, ScmType: LocalGit, SCM_DO_BUILD_DURING_DEPLOYMENT: 1
+2023-05-12T17:32:31.529550772Z: [ERROR]  UnboundLocalError: local variable 'link' referenced before assignment
 
+2023-05-12T17:32:31.530890484Z: [INFO]  No se encontrÃ³ el nÃºmero de requerimiento en el campo 'summary'.
 
-/home/LogFiles/2023_05_02_10-30-0-99_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_02_10-30-0-99_docker.log)
-2023-05-02T19:53:15.984Z INFO  -  Digest: sha256:5abb82cb6fa08cec200e3c7275f3852735c90ab9352728997785f1e5f8ed6f97
-2023-05-02T19:53:16.007Z INFO  -  Status: Downloaded newer image for mcr.microsoft.com/appsvc/python:3.10_20230323.2.tuxprod
-2023-05-02T19:53:16.070Z INFO  - Pull Image successful, Time taken: 0 Minutes and 49 Seconds
-2023-05-02T19:53:18.850Z INFO  - Starting container for site
-2023-05-02T19:53:18.851Z INFO  - docker run -d --expose=8000 --name gdrback_0_d13e3f5d -e WEBSITE_SITE_NAME=GdrBack -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=gdrback.azurewebsites.net -e WEBSITE_INSTANCE_ID=d9bad76c8a993dfd2f3a9d410b0df3f9c54c7720b1f2cd1d2cbfb527e03e14a5 -e WEBSITE_USE_DIAGNOSTIC_SERVER=True appsvc/python:3.10_20230323.2.tuxprod  
+2023-05-12T17:32:31.530903298Z: [INFO]  Requerimiento encontrado: 324
 
-2023-05-02T19:53:18.852Z INFO  - Logging is not enabled for this container.
-Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-05-02T19:53:22.627Z INFO  - Initiating warmup request to container gdrback_0_d13e3f5d for site gdrback
-2023-05-02T19:53:27.952Z INFO  - Container gdrback_0_d13e3f5d for site gdrback initialized successfully and is ready to serve requests.
+2023-05-12T17:32:31.530907996Z: [INFO]  Este es el id del ultimo requerimiento: 325
 
+2023-05-12T17:32:31.530911934Z: [INFO]  None
 
-/home/LogFiles/2023_05_03_10-30-0-96_default_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_03_10-30-0-96_default_docker.log)
-2023-05-03T16:47:00.464043403Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8db4bd3bf0608ac/antenv/lib/python3.10/site-packages'
-2023-05-03T16:47:01.276054056Z [2023-05-03 16:47:01 +0000] [82] [INFO] Starting gunicorn 20.1.0
-2023-05-03T16:47:01.288084424Z [2023-05-03 16:47:01 +0000] [82] [INFO] Listening at: http://0.0.0.0:8000 (82)
-2023-05-03T16:47:01.288128025Z [2023-05-03 16:47:01 +0000] [82] [INFO] Using worker: sync
-2023-05-03T16:47:01.290277609Z [2023-05-03 16:47:01 +0000] [86] [INFO] Booting worker with pid: 86
-2023-05-03T16:47:01.292320388Z Failed to find attribute 'app' in 'app'.
-2023-05-03T16:47:01.292415992Z [2023-05-03 16:47:01 +0000] [86] [INFO] Worker exiting (pid: 86)
-2023-05-03T16:47:01.568830825Z [2023-05-03 16:47:01 +0000] [82] [INFO] Shutting down: Master
-2023-05-03T16:47:01.568901627Z [2023-05-03 16:47:01 +0000] [82] [INFO] Reason: App failed to load.
+2023-05-12T17:32:31.530915871Z: [INFO]  data en funcion {'summary': 'Prueba carga requerimiento pre producciÃ³n', 'key': 'GDD', 'description': 'completar', 'type': 'Tarea', 'approvers': 'Juan Carlos Canepa', 'managment': 'algo', 'impact': " + '\n Enlace a la DocumentaciÃ³n: ", 'attached': '', 'priority': '1', 'initiative': 'iniciativa'}
 
+2023-05-12T17:32:31.530920560Z: [INFO]  Error al crear el issue en JIRA: JiraError HTTP 400 url: https://provinciamicroempresas.atlassian.net/rest/api/2/issue
 
+2023-05-12T17:32:31.530924668Z: [INFO]  	
 
-/home/LogFiles/2023_05_03_10-30-0-96_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_03_10-30-0-96_docker.log)
-2023-05-03T16:46:55.007Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-05-03T16:46:55.082Z INFO  - Starting container for site
-2023-05-03T16:46:55.084Z INFO  - docker run -d --expose=8000 --name gdrback_0_061db254 -e WEBSITE_SITE_NAME=GdrBack -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=gdrback.azurewebsites.net -e WEBSITE_INSTANCE_ID=c1e4a54d81d826a769e7253a68aeff879449c258d99c889b0905d6d97cdc5a15 -e WEBSITE_USE_DIAGNOSTIC_SERVER=True appsvc/python:3.10_20230323.2.tuxprod  
+2023-05-12T17:32:31.530949885Z: [INFO]  	response headers = {'Date': 'Fri, 12 May 2023 17:32:31 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': '8b1cc6961087c8b347760e021e7065f7', 'X-Aaccountid': '6228d8734160640069ca5686', 'Cache-Control': 'no-cache, no-store, no-transform', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '8c7d73026a0c6f39', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Transfer-Encoding': 'chunked'}
 
-2023-05-03T16:46:55.085Z INFO  - Logging is not enabled for this container.
-Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-05-03T16:46:57.212Z INFO  - Initiating warmup request to container gdrback_0_061db254 for site gdrback
-2023-05-03T16:47:02.508Z ERROR - Container gdrback_0_061db254 for site gdrback has exited, failing site start
-2023-05-03T16:47:02.540Z ERROR - Container gdrback_0_061db254 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
-2023-05-03T16:47:02.563Z INFO  - Stopping site gdrback because it failed during startup.
+2023-05-12T17:32:31.530957900Z: [INFO]  	response text = {"errorMessages":[],"errors":{"issuetype":"Especifica un tipo de incidencia vÃ¡lido"}}
 
+2023-05-12T17:32:31.530962158Z: [INFO]  Ocurrio un error en la ejecucion de crear requerimiento: local variable 'newIssue' referenced before assignment
 
-/home/LogFiles/2023_05_03_10-30-0-97_default_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_03_10-30-0-97_default_docker.log)
-2023-05-03T12:52:37.437273232Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8db4bd3bf0608ac/antenv/lib/python3.10/site-packages'
-2023-05-03T12:52:38.326952024Z [2023-05-03 12:52:38 +0000] [82] [INFO] Starting gunicorn 20.1.0
-2023-05-03T12:52:38.341161738Z [2023-05-03 12:52:38 +0000] [82] [INFO] Listening at: http://0.0.0.0:8000 (82)
-2023-05-03T12:52:38.341543644Z [2023-05-03 12:52:38 +0000] [82] [INFO] Using worker: sync
-2023-05-03T12:52:38.348362447Z [2023-05-03 12:52:38 +0000] [85] [INFO] Booting worker with pid: 85
-2023-05-03T12:52:38.352250905Z Failed to find attribute 'app' in 'app'.
-2023-05-03T12:52:38.352266505Z [2023-05-03 12:52:38 +0000] [85] [INFO] Worker exiting (pid: 85)
-2023-05-03T12:52:38.739669734Z [2023-05-03 12:52:38 +0000] [82] [INFO] Shutting down: Master
-2023-05-03T12:52:38.739735535Z [2023-05-03 12:52:38 +0000] [82] [INFO] Reason: App failed to load.
+2023-05-12T17:32:31.530966205Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:31 +0000] "POST /CreateIssue HTTP/1.1" 500 265 "-" "PostmanRuntime/7.32.2"
 
+2023-05-12T17:32:35.396150814Z: [ERROR]  [2023-05-12 17:32:35,395] ERROR in app: Exception on /CreateIssue [POST]
 
+2023-05-12T17:32:35.396197731Z: [ERROR]  Traceback (most recent call last):
 
-/home/LogFiles/2023_05_03_10-30-0-97_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_03_10-30-0-97_docker.log)
-2023-05-03T12:52:30.347Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-05-03T12:52:30.421Z INFO  - Starting container for site
-2023-05-03T12:52:30.422Z INFO  - docker run -d --expose=8000 --name gdrback_0_f7d3edf8 -e WEBSITE_SITE_NAME=GdrBack -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=gdrback.azurewebsites.net -e WEBSITE_INSTANCE_ID=77353cfb0a465bbbb7ec5a5b7a8c56dff3c97489f7fa731d4922e7760b379f6c -e WEBSITE_USE_DIAGNOSTIC_SERVER=True appsvc/python:3.10_20230323.2.tuxprod  
+2023-05-12T17:32:35.396205376Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
 
-2023-05-03T12:52:30.423Z INFO  - Logging is not enabled for this container.
-Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-05-03T12:52:34.042Z INFO  - Initiating warmup request to container gdrback_0_f7d3edf8 for site gdrback
-2023-05-03T12:52:39.498Z ERROR - Container gdrback_0_f7d3edf8 for site gdrback has exited, failing site start
-2023-05-03T12:52:39.537Z ERROR - Container gdrback_0_f7d3edf8 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
-2023-05-03T12:52:39.560Z INFO  - Stopping site gdrback because it failed during startup.
+2023-05-12T17:32:35.396333596Z: [ERROR]      response = self.full_dispatch_request()
 
+2023-05-12T17:32:35.396338826Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
 
-/home/LogFiles/2023_05_05_10-30-0-99_default_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_05_10-30-0-99_default_docker.log)
-2023-05-05T13:15:50.022115130Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8db4bd3bf0608ac/antenv/lib/python3.10/site-packages'
-2023-05-05T13:15:50.454996773Z [2023-05-05 13:15:50 +0000] [68] [INFO] Starting gunicorn 20.1.0
-2023-05-05T13:15:50.473347725Z [2023-05-05 13:15:50 +0000] [68] [INFO] Listening at: http://0.0.0.0:8000 (68)
-2023-05-05T13:15:50.473523427Z [2023-05-05 13:15:50 +0000] [68] [INFO] Using worker: sync
-2023-05-05T13:15:50.476894574Z [2023-05-05 13:15:50 +0000] [71] [INFO] Booting worker with pid: 71
-2023-05-05T13:15:50.479267906Z Failed to find attribute 'app' in 'app'.
-2023-05-05T13:15:50.480644525Z [2023-05-05 13:15:50 +0000] [71] [INFO] Worker exiting (pid: 71)
-2023-05-05T13:15:50.529331394Z [2023-05-05 13:15:50 +0000] [68] [INFO] Shutting down: Master
-2023-05-05T13:15:50.529403595Z [2023-05-05 13:15:50 +0000] [68] [INFO] Reason: App failed to load.
+2023-05-12T17:32:35.396342953Z: [ERROR]      rv = self.handle_user_exception(e)
 
+2023-05-12T17:32:35.396346520Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
 
+2023-05-12T17:32:35.396350517Z: [ERROR]      return cors_after_request(app.make_response(f(*args, **kwargs)))
 
-/home/LogFiles/2023_05_05_10-30-0-99_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_05_10-30-0-99_docker.log)
-2023-05-05T13:15:47.887Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-05-05T13:15:47.930Z INFO  - Starting container for site
-2023-05-05T13:15:47.932Z INFO  - docker run -d --expose=8000 --name gdrback_0_b4f2b6a9 -e WEBSITE_SITE_NAME=GdrBack -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=gdrback.azurewebsites.net -e WEBSITE_INSTANCE_ID=d9bad76c8a993dfd2f3a9d410b0df3f9c54c7720b1f2cd1d2cbfb527e03e14a5 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False appsvc/python:3.10_20230323.2.tuxprod  
+2023-05-12T17:32:35.396354325Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
 
-2023-05-05T13:15:47.932Z INFO  - Logging is not enabled for this container.
-Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-05-05T13:15:48.944Z INFO  - Initiating warmup request to container gdrback_0_b4f2b6a9 for site gdrback
-2023-05-05T13:15:51.510Z ERROR - Container gdrback_0_b4f2b6a9 for site gdrback has exited, failing site start
-2023-05-05T13:15:51.528Z ERROR - Container gdrback_0_b4f2b6a9 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
-2023-05-05T13:15:51.535Z INFO  - Stopping site gdrback because it failed during startup.
+2023-05-12T17:32:35.396358011Z: [ERROR]      rv = self.dispatch_request()
 
+2023-05-12T17:32:35.396363672Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
 
-/home/LogFiles/2023_05_08_10-30-0-96_default_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_08_10-30-0-96_default_docker.log)
-2023-05-08T17:23:30.980883652Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8db4fcbeb8d2523/antenv/lib/python3.10/site-packages'
-2023-05-08T17:23:31.465962833Z [2023-05-08 17:23:31 +0000] [69] [INFO] Starting gunicorn 20.1.0
-2023-05-08T17:23:31.475646474Z [2023-05-08 17:23:31 +0000] [69] [INFO] Listening at: http://0.0.0.0:8000 (69)
-2023-05-08T17:23:31.475855177Z [2023-05-08 17:23:31 +0000] [69] [INFO] Using worker: sync
-2023-05-08T17:23:31.478898622Z [2023-05-08 17:23:31 +0000] [72] [INFO] Booting worker with pid: 72
-2023-05-08T17:23:31.483530690Z Failed to find attribute 'app' in 'app'.
-2023-05-08T17:23:31.483547090Z [2023-05-08 17:23:31 +0000] [72] [INFO] Worker exiting (pid: 72)
-2023-05-08T17:23:31.520523330Z [2023-05-08 17:23:31 +0000] [69] [INFO] Shutting down: Master
-2023-05-08T17:23:31.520615031Z [2023-05-08 17:23:31 +0000] [69] [INFO] Reason: App failed to load.
+2023-05-12T17:32:35.396367589Z: [ERROR]      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
 
+2023-05-12T17:32:35.396371176Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/view_createIssue.py", line 26, in CreateNewIssue
 
+2023-05-12T17:32:35.396374873Z: [ERROR]      response = controller_createIssue.createIssue(dataIssue)
 
-/home/LogFiles/2023_05_08_10-30-0-96_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_08_10-30-0-96_docker.log)
-2023-05-08T17:23:27.581Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-05-08T17:23:27.730Z INFO  - Starting container for site
-2023-05-08T17:23:27.732Z INFO  - docker run -d --expose=8000 --name gdrback_0_cbc4b345 -e WEBSITE_SITE_NAME=GdrBack -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=gdrback.azurewebsites.net -e WEBSITE_INSTANCE_ID=c1e4a54d81d826a769e7253a68aeff879449c258d99c889b0905d6d97cdc5a15 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False appsvc/python:3.10_20230323.2.tuxprod  
+2023-05-12T17:32:35.396378220Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/controller_createIssue.py", line 151, in createIssue
 
-2023-05-08T17:23:27.733Z INFO  - Logging is not enabled for this container.
-Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-05-08T17:23:29.260Z INFO  - Initiating warmup request to container gdrback_0_cbc4b345 for site gdrback
-2023-05-08T17:23:33.038Z ERROR - Container gdrback_0_cbc4b345 for site gdrback has exited, failing site start
-2023-05-08T17:23:33.062Z ERROR - Container gdrback_0_cbc4b345 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
-2023-05-08T17:23:33.067Z INFO  - Stopping site gdrback because it failed during startup.
+2023-05-12T17:32:35.396382187Z: [ERROR]      return jsonify({"link":link, "key":newIssue.key})
 
+2023-05-12T17:32:35.396386194Z: [ERROR]  UnboundLocalError: local variable 'link' referenced before assignment
 
-/home/LogFiles/2023_05_08_10-30-0-97_default_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_08_10-30-0-97_default_docker.log)
-2023-05-08T14:46:44.118284564Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8db4fcbeb8d2523/antenv/lib/python3.10/site-packages'
-2023-05-08T14:46:44.651915905Z [2023-05-08 14:46:44 +0000] [69] [INFO] Starting gunicorn 20.1.0
-2023-05-08T14:46:44.664110220Z [2023-05-08 14:46:44 +0000] [69] [INFO] Listening at: http://0.0.0.0:8000 (69)
-2023-05-08T14:46:44.664599929Z [2023-05-08 14:46:44 +0000] [69] [INFO] Using worker: sync
-2023-05-08T14:46:44.667043472Z [2023-05-08 14:46:44 +0000] [72] [INFO] Booting worker with pid: 72
-2023-05-08T14:46:44.669362713Z Failed to find attribute 'app' in 'app'.
-2023-05-08T14:46:44.669640218Z [2023-05-08 14:46:44 +0000] [72] [INFO] Worker exiting (pid: 72)
-2023-05-08T14:46:45.128081526Z [2023-05-08 14:46:45 +0000] [69] [INFO] Shutting down: Master
-2023-05-08T14:46:45.128146727Z [2023-05-08 14:46:45 +0000] [69] [INFO] Reason: App failed to load.
+2023-05-12T17:32:35.399359004Z: [INFO]  No se encontrÃ³ el nÃºmero de requerimiento en el campo 'summary'.
 
+2023-05-12T17:32:35.399383129Z: [INFO]  Requerimiento encontrado: 324
 
+2023-05-12T17:32:35.399389200Z: [INFO]  Este es el id del ultimo requerimiento: 325
 
-/home/LogFiles/2023_05_08_10-30-0-97_docker.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/2023_05_08_10-30-0-97_docker.log)
-2023-05-08T14:46:39.856Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-05-08T14:46:40.093Z INFO  - Starting container for site
-2023-05-08T14:46:40.094Z INFO  - docker run -d --expose=8000 --name gdrback_0_ce9c52d2 -e WEBSITE_SITE_NAME=GdrBack -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=gdrback.azurewebsites.net -e WEBSITE_INSTANCE_ID=77353cfb0a465bbbb7ec5a5b7a8c56dff3c97489f7fa731d4922e7760b379f6c -e WEBSITE_USE_DIAGNOSTIC_SERVER=False appsvc/python:3.10_20230323.2.tuxprod  
+2023-05-12T17:32:35.399393468Z: [INFO]  None
 
-2023-05-08T14:46:40.102Z INFO  - Logging is not enabled for this container.
-Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-05-08T14:46:42.421Z INFO  - Initiating warmup request to container gdrback_0_ce9c52d2 for site gdrback
-2023-05-08T14:46:46.111Z ERROR - Container gdrback_0_ce9c52d2 for site gdrback has exited, failing site start
-2023-05-08T14:46:46.174Z ERROR - Container gdrback_0_ce9c52d2 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
-2023-05-08T14:46:46.192Z INFO  - Stopping site gdrback because it failed during startup.
+2023-05-12T17:32:35.399397556Z: [INFO]  data en funcion {'summary': 'Prueba carga requerimiento pre producciÃ³n', 'key': 'GDD', 'description': 'completar', 'type': 'Tarea', 'approvers': 'Juan Carlos Canepa', 'managment': 'algo', 'impact': " + '\n Enlace a la DocumentaciÃ³n: ", 'attached': '', 'priority': '1', 'initiative': 'iniciativa'}
 
+2023-05-12T17:32:35.399402686Z: [INFO]  Error al crear el issue en JIRA: JiraError HTTP 400 url: https://provinciamicroempresas.atlassian.net/rest/api/2/issue
 
-/home/LogFiles/AppServiceAppLogs_Feature_Installer/startup_0.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/AppServiceAppLogs_Feature_Installer/startup_0.log)
-2023-05-08 17:20:06,750  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
-2023-05-08 17:20:28,422  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
-2023-05-08 17:20:28,424  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
-2023-05-08 17:20:28,424  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
-2023-05-08 17:20:53,160  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
-2023-05-08 17:20:53,161  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
-2023-05-08 17:20:53,164  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
-2023-05-08 17:23:31,472  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
-2023-05-08 17:23:31,473  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
-2023-05-08 17:23:31,473  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2023-05-12T17:32:35.399406843Z: [INFO]  	
 
+2023-05-12T17:32:35.399410831Z: [INFO]  	response headers = {'Date': 'Fri, 12 May 2023 17:32:35 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': 'c11b2d816fe57a40affca79fff801ed9', 'X-Aaccountid': '6228d8734160640069ca5686', 'Cache-Control': 'no-cache, no-store, no-transform', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': '946fca18124f5d52', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Transfer-Encoding': 'chunked'}
 
-/home/LogFiles/CodeProfiler/00f4b9_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/00f4b9_debug.log)
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 00f4b9c2bc7bbba7dd3f25ee0118b3064f2c6a0aa49b4cae0902f270f1737d89
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/00f4b9_profiler_trace.json
-[2023_03_13_19_29_13] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_03_13_19_29_14] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 00f4b9c2bc7bbba7dd3f25ee0118b3064f2c6a0aa49b4cae0902f270f1737d89
-[2023_03_13_19_29_14] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:35.399428013Z: [INFO]  	response text = {"errorMessages":[],"errors":{"issuetype":"Especifica un tipo de incidencia vÃ¡lido"}}
 
+2023-05-12T17:32:35.399434134Z: [INFO]  Ocurrio un error en la ejecucion de crear requerimiento: local variable 'newIssue' referenced before assignment
 
-/home/LogFiles/CodeProfiler/2e9614_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/2e9614_debug.log)
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 2e9614b903860387ad41d2d4735570ca0c8b29649a02cb187ad6afea560d5745
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/2e9614_profiler_trace.json
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 2e9614b903860387ad41d2d4735570ca0c8b29649a02cb187ad6afea560d5745
-[2023_04_19_16_41_33] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:35.399439204Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:35 +0000] "POST /CreateIssue HTTP/1.1" 500 265 "-" "PostmanRuntime/7.32.2"
 
+2023-05-12T17:32:55.468932410Z: [ERROR]  [2023-05-12 17:32:55,468] ERROR in app: Exception on /CreateIssue [POST]
 
-/home/LogFiles/CodeProfiler/59a44e_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/59a44e_debug.log)
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 59a44e06d4fe43941417fdd14d21b19d8cc9342e48d71c46349cd3ba95e8d492
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/59a44e_profiler_trace.json
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 59a44e06d4fe43941417fdd14d21b19d8cc9342e48d71c46349cd3ba95e8d492
-[2023_04_25_18_02_59] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.468999215Z: [ERROR]  Traceback (most recent call last):
 
+2023-05-12T17:32:55.469005226Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
 
-/home/LogFiles/CodeProfiler/77353c_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/77353c_debug.log)
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 77353cfb0a465bbbb7ec5a5b7a8c56dff3c97489f7fa731d4922e7760b379f6c
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/77353c_profiler_trace.json
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 77353cfb0a465bbbb7ec5a5b7a8c56dff3c97489f7fa731d4922e7760b379f6c
-[2023_05_03_11_30_24] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469009935Z: [ERROR]      response = self.full_dispatch_request()
 
+2023-05-12T17:32:55.469013502Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
 
-/home/LogFiles/CodeProfiler/870d61_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/870d61_debug.log)
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 870d616759e74713524da24210e88870fbcc76bc99b00f44c089fc8ca08f9724
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/870d61_profiler_trace.json
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 870d616759e74713524da24210e88870fbcc76bc99b00f44c089fc8ca08f9724
-[2023_04_24_12_06_15] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469017749Z: [ERROR]      rv = self.handle_user_exception(e)
 
+2023-05-12T17:32:55.469021667Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
 
-/home/LogFiles/CodeProfiler/94d915_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/94d915_debug.log)
-[2023_03_14_15_57_44] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_03_14_15_57_44] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_03_14_15_57_44] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_03_14_15_57_45] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_03_14_15_57_45] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/94d915_profiler_trace.json
-[2023_03_14_15_57_45] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_03_14_15_57_45] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 94d915a44aee1d3847dbc51d027badf44d02ade1c01f329d3f3b939bef18fb9f
-[2023_03_14_15_57_45] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469025885Z: [ERROR]      return cors_after_request(app.make_response(f(*args, **kwargs)))
 
+2023-05-12T17:32:55.469029842Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
 
-/home/LogFiles/CodeProfiler/9e89c1_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/9e89c1_debug.log)
-[2023_04_13_16_23_24] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_13_16_23_24] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_13_16_23_24] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_13_16_23_25] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_13_16_23_25] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/9e89c1_profiler_trace.json
-[2023_04_13_16_23_25] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_13_16_23_25] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 9e89c1d60cfdd954c8867d82790648aafd773e27a2d4103f500276884301a0da
-[2023_04_13_16_23_25] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469034010Z: [ERROR]      rv = self.dispatch_request()
 
+2023-05-12T17:32:55.469037777Z: [ERROR]    File "/tmp/8db530e0bf8ec27/antenv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
 
-/home/LogFiles/CodeProfiler/a8885e_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/a8885e_debug.log)
-[2023_03_16_21_52_43] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_03_16_21_52_43] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_03_16_21_52_43] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_03_16_21_52_44] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_03_16_21_52_44] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/a8885e_profiler_trace.json
-[2023_03_16_21_52_44] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_03_16_21_52_44] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance a8885ef659d8a95b1641d22a917b5dd3e957eecf7ebe63189e8bfd2d15df4289
-[2023_03_16_21_52_44] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469042055Z: [ERROR]      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
 
+2023-05-12T17:32:55.469046493Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/view_createIssue.py", line 26, in CreateNewIssue
 
-/home/LogFiles/CodeProfiler/c1e4a5_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/c1e4a5_debug.log)
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id c1e4a54d81d826a769e7253a68aeff879449c258d99c889b0905d6d97cdc5a15
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/c1e4a5_profiler_trace.json
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance c1e4a54d81d826a769e7253a68aeff879449c258d99c889b0905d6d97cdc5a15
-[2023_04_27_18_21_29] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469050992Z: [ERROR]      response = controller_createIssue.createIssue(dataIssue)
 
+2023-05-12T17:32:55.469055340Z: [ERROR]    File "/tmp/8db530e0bf8ec27/source/jiraModule/components/createIssue/controller_createIssue.py", line 151, in createIssue
 
-/home/LogFiles/CodeProfiler/cb28b3_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/cb28b3_debug.log)
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id cb28b33bdba2c7bbaf59c993cae149b357bc807b61bcb168ca5ba6b0ca5c3e20
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/cb28b3_profiler_trace.json
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance cb28b33bdba2c7bbaf59c993cae149b357bc807b61bcb168ca5ba6b0ca5c3e20
-[2023_04_12_14_11_10] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.469059397Z: [ERROR]      return jsonify({"link":link, "key":newIssue.key})
 
+2023-05-12T17:32:55.469063685Z: [ERROR]  UnboundLocalError: local variable 'link' referenced before assignment
 
-/home/LogFiles/CodeProfiler/cffa27_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/cffa27_debug.log)
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/cffa27_profiler_trace.json
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance cffa275333a302a4e96ca9dbb7bc4f4c4b650a3bd97ff27fc3abdafdda74e222
-[2023_03_15_17_06_13] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.470761576Z: [INFO]  No se encontrÃ³ el nÃºmero de requerimiento en el campo 'summary'.
 
+2023-05-12T17:32:55.470788426Z: [INFO]  Requerimiento encontrado: 324
 
-/home/LogFiles/CodeProfiler/d9bad7_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/d9bad7_debug.log)
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id d9bad76c8a993dfd2f3a9d410b0df3f9c54c7720b1f2cd1d2cbfb527e03e14a5
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/d9bad7_profiler_trace.json
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance d9bad76c8a993dfd2f3a9d410b0df3f9c54c7720b1f2cd1d2cbfb527e03e14a5
-[2023_05_02_19_53_27] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.470795199Z: [INFO]  Este es el id del ultimo requerimiento: 325
 
+2023-05-12T17:32:55.470799076Z: [INFO]  None
 
-/home/LogFiles/CodeProfiler/da4120_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/da4120_debug.log)
-[2023_04_19_13_32_40] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_04_19_13_32_40] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_04_19_13_32_40] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id da4120b0cd2c3bf45e7a522fd31172e3f3306e5d97465e97afa2b8b5d3b0b609
-[2023_04_19_13_32_40] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_04_19_13_32_40] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_04_19_13_32_41] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_04_19_13_32_41] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/da4120_profiler_trace.json
-[2023_04_19_13_32_41] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_04_19_13_32_41] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance da4120b0cd2c3bf45e7a522fd31172e3f3306e5d97465e97afa2b8b5d3b0b609
-[2023_04_19_13_32_41] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.470803184Z: [INFO]  data en funcion {'summary': 'Prueba carga requerimiento pre producciÃ³n', 'key': 'GDD', 'description': 'completar', 'type': 'Tarea', 'approvers': 'Juan Carlos Canepa', 'managment': 'algo', 'impact': " + '\n Enlace a la DocumentaciÃ³n: ", 'attached': '', 'priority': '1', 'initiative': 'iniciativa'}
 
+2023-05-12T17:32:55.470808293Z: [INFO]  Error al crear el issue en JIRA: JiraError HTTP 400 url: https://provinciamicroempresas.atlassian.net/rest/api/2/issue
 
-/home/LogFiles/CodeProfiler/e8a25a_debug.log  (https://gdrback.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/e8a25a_debug.log)
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id e8a25aeda9f8112c52a78edbf794ec6bc124d323fe575e4a705382f2e36592ba
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] successfully deleted the status file
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/e8a25a_profiler_trace.json
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance e8a25aeda9f8112c52a78edbf794ec6bc124d323fe575e4a705382f2e36592ba
-[2023_03_20_19_42_44] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+2023-05-12T17:32:55.470827469Z: [INFO]  	
 
+2023-05-12T17:32:55.470832970Z: [INFO]  	response headers = {'Date': 'Fri, 12 May 2023 17:32:55 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Server': 'AtlassianEdge', 'Timing-Allow-Origin': '*', 'X-Arequestid': 'a31639de9a5b77fcd28f9c6fb6ec4086', 'X-Aaccountid': '6228d8734160640069ca5686', 'Cache-Control': 'no-cache, no-store, no-transform', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Atl-Traceid': 'b8106b075e55f997', 'Report-To': '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}', 'Nel': '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload', 'Transfer-Encoding': 'chunked'}
 
-Ending Log Tail of existing logs ---
+2023-05-12T17:32:55.470840534Z: [INFO]  	response text = {"errorMessages":[],"errors":{"issuetype":"Especifica un tipo de incidencia vÃ¡lido"}}
 
-Starting Live Log Stream ---
+2023-05-12T17:32:55.470845242Z: [INFO]  Ocurrio un error en la ejecucion de crear requerimiento: local variable 'newIssue' referenced before assignment
+
+2023-05-12T17:32:55.470849070Z: [INFO]  169.254.129.1 - - [12/May/2023:17:32:55 +0000] "POST /CreateIssue HTTP/1.1" 500 265 "-" "PostmanRuntime/7.32.2"
+
+2023-05-12T17:33:14.937013037Z: [INFO]  esto es getallprojects controllers
+
+2023-05-12T17:33:14.937055136Z: [INFO]  [{'key': 'GP0007', 'name': 'Nuevo workflow de colegiatura'}, {'key': 'SP000BN', 'name': 'Score prome '}, {'key': 'RDG', 'name': 'RendiciÃ³n de gastos'}, {'key': 'GDD', 'name': 'GestiÃ³n de la demanda'}, {'key': 'GT', 'name': 'GestiÃ³n de tecnologÃ­a'}]
+
+2023-05-12T17:33:14.937064122Z: [INFO]  169.254.129.1 - - [12/May/2023:17:33:14 +0000] "GET /GetAllProjects HTTP/1.1" 200 263 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"

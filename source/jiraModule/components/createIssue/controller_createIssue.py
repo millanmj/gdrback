@@ -123,7 +123,8 @@ def createIssue(dataIssue: dict) -> json:
                                         Beneficio: {dataIssue['impact']}'.
                                         Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                         "priority": {"id":dataIssue['priority']},
-                        "type": {"id":"10001"}
+                        # "type": {"id":"10001"}
+                        "issuetype": {"name": "Tarea"}
                     }   
         print(issueDict)
         print('---------------------------------------------------------------')
@@ -136,7 +137,7 @@ def createIssue(dataIssue: dict) -> json:
             newIssue = jira.create_issue(fields=issueDict)
             print(f'creando requerimiento: {newIssue}')
             #Formateo el enlace al requerimiento
-            input('presione para continuar')
+            # input('presione para continuar')
             link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
             
         except Exception as e:
