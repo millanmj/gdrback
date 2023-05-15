@@ -63,7 +63,7 @@ def mapeoDeRequerimientos(data: json, issue_dict : dict, ENVIROMENT: str) -> dic
         
             issue_dict["customfield_10003"] = [{'accountId':str(data['approvers'])}]             
             issue_dict["customfield_10054"] = [{'id':mapeoGerencia(str(data['approvers']), ENVIROMENT)}]
-            issue_dict["issuetype"] = {"id":"10001"}                         
+            issue_dict["type"] = {"id":"10001"}                         
 
             if "finalDate" in data:
                 issue_dict['customfield_10038']= str((data['finalDate'][0:10]))
@@ -74,7 +74,7 @@ def mapeoDeRequerimientos(data: json, issue_dict : dict, ENVIROMENT: str) -> dic
     else:
             issue_dict["customfield_10050"] = [{'accountId':str(data['approvers'])}]
             issue_dict["customfield_10055"] = [{'id': mapeoGerencia(str(data['approvers']))}]                    
-            issue_dict[ "issuetype"] = {"id":"10009"}      
+            issue_dict[ "type"] = {"id":"10009"}      
 
             if "finalDate" in data:
                 issue_dict['customfield_10061']= str((data['finalDate'][0:10]))

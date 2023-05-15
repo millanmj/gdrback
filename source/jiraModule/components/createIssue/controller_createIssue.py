@@ -105,6 +105,7 @@ def getlastIssueReq(num_issues=10):
 
 def createIssue(dataIssue: dict) -> json:
     
+    newIssue: object = None
     try:
         jira = jiraServices.getConection()
         idUltimoRequerimiento: str = ''
@@ -116,33 +117,34 @@ def createIssue(dataIssue: dict) -> json:
         issueDict = {
                         "project": dataIssue['key'],
                         "summary": '[REQ '+ idUltimoRequerimiento+'] ' + dataIssue['summary'],
-                        "description": 'Rol: '+ dataIssue['managment']+ '\n'+ 'Funcionalidad: '+dataIssue['description']
-                                        +'\n'+ 'Beneficio: '+ dataIssue['impact'] + 'Enlace a la Documentación: '
-                                        + dataIssue['attached'], #+ '\n Iniciativa: '+ dataIssue['initiative'],        
+                        "description": str(f"""
+                                        Rol: {dataIssue['managment']}.
+                                        Funcionalidad: {dataIssue['description']}.
+                                        Beneficio: {dataIssue['impact']}'.
+                                        Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                         "priority": {"id":dataIssue['priority']},
-                        "issuetype": {"id":"10001"}
+                        "type": {"id":"10001"}
                     }   
-        
+        print(issueDict)
+        print('---------------------------------------------------------------')
         MapeoDeRequerimientos(dataIssue, issueDict, jiraServices.getEnviroment())
-       
+        print('---------------------------------------------------------------')
+        for i in issueDict.keys():
+            print(f'{i} : {issueDict[i]}')
         try:       
             ##Descomentar para crear un requerimiento en JIRA            
             newIssue = jira.create_issue(fields=issueDict)
             print(f'creando requerimiento: {newIssue}')
+            #Formateo el enlace al requerimiento
+            input('presione para continuar')
+            link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
             
         except Exception as e:
             print(f"Error al crear el issue en JIRA: {e}")
             
-        
-        
-
         #jira.add_attachment(issue=new_issue, attachment='C:/Users/Colaborador/Documents/logo-icon.png')
 
        
-    
-    
-        #Formateo el enlace al requerimiento
-        link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
         
     except Exception as e:
         print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
