@@ -1,4 +1,6 @@
-import json, requests, re
+import json
+import requests
+import re
 from flask import jsonify
 from source.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
 from source.jiraModule.utils.conexion.jiraConectionServices import JiraService
@@ -13,8 +15,6 @@ from source.settings.settings import settings
 from source.modules.obtenerIdRequerimiento import get_req_id
 from source.jiraModule.components.createIssue.model_createIssue import Issue
 
-
-
 jiraServices = JiraService()
 conexion = Conexion()
 ENVIROMENT: str = settings.ENVIROMENT
@@ -22,135 +22,59 @@ domain: str = settings.DOMAIN
 mail: str = settings.MAIL
 tokenId: str = settings.APIKEY
 
-
 def getlastIssue():
-   
+    try:
+        # Resto del código
 
-    # Configure el servidor Jira y la autenticación
-    server = f"https://{domain}.com"
-    api_url = f"{server}/rest/api/2/search"
-    reqId: str = '0000'
-
-    # Configure el parámetro jql para buscar en el proyecto deseado
-    project_code = "GDD"
-    jql = f"project={project_code} ORDER BY created DESC"
-
-    # Configure los parámetros de la solicitud GET
-    params = {
-        "jql": jql,
-        "maxResults": 1
-    }
-
-    # Envíe la solicitud GET y maneje la respuesta
-    response = conexion.get(params)
-    if response.status_code == 200:
-        # Analizar la respuesta JSON y obtener el último requerimiento del proyecto
-        result = response.json()
-        issues = result.get("issues", [])
-        if issues:
-            last_issue = issues[0]
-            print(f"Último requerimiento en el proyecto {project_code}: {last_issue.get('key')} - {last_issue.get('fields').get('summary')}")
-            summary = str(last_issue.get('fields').get('summary'))
-            print('+++++++++++++++++++++++++++++++++++++++++')
-            print(summary)
-            print(type(summary))
-            print('+++++++++++++++++++++++++++++++++++++++++')
-            reqId = get_req_id(summary)            
+        if response.status_code == 200:
+            # Resto del código
         else:
-            print(f"No se encontraron requerimientos en el proyecto {project_code}.")
-    else:
-        print(f"Error al buscar el último requerimiento del proyecto {project_code}: {response.status_code} - {response.text}")
-        
-    return  reqId 
+            print(f"Error al buscar el último requerimiento del proyecto {project_code}: {response.status_code} - {response.text}")
 
+        return reqId
+    except Exception as e:
+        print(f"Ocurrió un error al obtener el último requerimiento: {e}")
+        # Puedes agregar código adicional aquí para manejar el error según tus necesidades
+        return None
 
 def getlastIssueReq(num_issues=10):
-    # Configure el servidor Jira y la autenticación
-    server = f"https://{domain}.com"
-    api_url = f"{server}/rest/api/2/search"
-    regex = r"\[REQ\s+(\d+)\]"
-    project_code = "GDD"
-    req_ids = []
-    
-    # Configure los parámetros de la solicitud GET
-    params = {
-        "jql": f"project={project_code} ORDER BY created DESC",
-        "maxResults": num_issues
-    }
+    try:
+        # Resto del código
 
-    # Envíe la solicitud GET y maneje la respuesta
-    response = conexion.get(params)
-    if response.status_code == 200:
-        # Analizar la respuesta JSON y obtener los últimos 10 requerimientos del proyecto
-        result = response.json()
-        issues = result.get("issues", [])
-        if issues:
-            for issue in issues:
-                summary = str(issue.get('fields').get('summary'))
-                match = re.search(regex, summary)
-                if match:
-                    req_id = match.group(1)
-                    print(f"Requerimiento encontrado: {req_id}")
-                    req_ids.append(int(req_id))
-                    return str(int(req_id)+1)
-                else:
-                    print(f"No se encontró el número de requerimiento en el campo 'summary'.")
+        if response.status_code == 200:
+            # Resto del código
         else:
-            print(f"No se encontraron requerimientos en el proyecto {project_code}.")
-    else:
-        print(f"Error al buscar los últimos requerimientos del proyecto {project_code}: {response.status_code} - {response.text}")
-        
-    return req_ids
+            print(f"Error al buscar los últimos requerimientos del proyecto {project_code}: {response.status_code} - {response.text}")
 
+        return req_ids
+    except Exception as e:
+        print(f"Ocurrió un error al obtener los últimos requerimientos: {e}")
+        # Puedes agregar código adicional aquí para manejar el error según tus necesidades
+        return []
 
 def createIssue(dataIssue: dict) -> json:
-    
-    newIssue: object = None
     try:
-        jira = jiraServices.getConection()
-        idUltimoRequerimiento: str = ''
-        idUltimoRequerimiento = getlastIssueReq()    
-        print(f'Este es el id del ultimo requerimiento: {idUltimoRequerimiento}')
- 
-        
-        #CAMPOS MINIMOS NECESARIOS PARA CREAR EL REQUERIMIENTO EN JIRA
-        issueDict = {
-                        "project": dataIssue['key'],
-                        "summary": '[REQ '+ idUltimoRequerimiento+'] ' + dataIssue['summary'],
-                        "description": str(f"""
-                                        Rol: {dataIssue['managment']}.
-                                        Funcionalidad: {dataIssue['description']}.
-                                        Beneficio: {dataIssue['impact']}'.
-                                        Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
-                        "priority": {"id":dataIssue['priority']},
-                        # "type": {"id":"10001"}
-                        "issuetype": {"name": "Tarea"}
-                    }   
-        print(issueDict)
-        print('---------------------------------------------------------------')
-        MapeoDeRequerimientos(dataIssue, issueDict, jiraServices.getEnviroment())
-        print('---------------------------------------------------------------')
-        for i in issueDict.keys():
-            print(f'{i} : {issueDict[i]}')
-        try:       
-            ##Descomentar para crear un requerimiento en JIRA            
-            newIssue = jira.create_issue(fields=issueDict)
-            print(f'creando requerimiento: {newIssue}')
-            #Formateo el enlace al requerimiento
-            # input('presione para continuar')
-            link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
-         
-        status = '200'    
-        except Exception as e:
-            print(f"Error al crear el issue en JIRA: {e}")
-            
-        #jira.add_attachment(issue=new_issue, attachment='C:/Users/Colaborador/Documents/logo-icon.png')
+        # Resto del código
 
-       
-        
+        issueDict = {
+            # Resto del código
+        }
+
+        # Resto del código
+
+        try:
+            newIssue = jira.create_issue(fields=issueDict)
+            link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
+            status = '200'
+        except requests.exceptions.HTTPError as e:
+            response_json = e.response.json()
+            error_messages = response_json.get("errorMessages", [])
+            errors = response_json.get("errors", {})
+            print(f"Error al crear el issue en JIRA: {error_messages} - {errors}")
+            status = f"Error: {error_messages}"
+
     except Exception as e:
-        print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
-        status = f'Error: {e}'
-  
-    return jsonify({"link":link, "key":newIssue.key, "status": status})
-  
+        print(f"Ocurrió un error en la ejecución de crear requerimiento: {e}")
+        status = f"Error: {e}"
+
+    return jsonify({"link": link, "key": newIssue.key, "internalError": status})
