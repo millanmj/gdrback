@@ -139,7 +139,8 @@ def createIssue(dataIssue: dict) -> json:
             #Formateo el enlace al requerimiento
             # input('presione para continuar')
             link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
-            
+         
+        status = '200'    
         except Exception as e:
             print(f"Error al crear el issue en JIRA: {e}")
             
@@ -149,7 +150,7 @@ def createIssue(dataIssue: dict) -> json:
         
     except Exception as e:
         print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
-    
+        status = f'Error: {e}'
   
-    return jsonify({"link":link, "key":newIssue.key})
+    return jsonify({"link":link, "key":newIssue.key, "status": status})
   
