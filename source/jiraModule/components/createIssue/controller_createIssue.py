@@ -1,4 +1,5 @@
 import json, requests, re
+from jira import JIRA
 from flask import jsonify
 from source.modules.mapeoDeRequerimientos import MapeoDeRequerimientos
 from source.jiraModule.utils.conexion.jiraConectionServices import JiraService
@@ -110,7 +111,12 @@ def createIssue(dataIssue: dict) -> json:
     link: str = ''
     newIssue: object = None
     try:
+        print('esto es getallprojects controllers')
+        jiraOptions ={'server': "https://"+domain+".atlassian.net"}
+        jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
         jira = jiraServices.getConection()
+        
+        
         idUltimoRequerimiento: str = ''
         idUltimoRequerimiento = getlastIssueReq()    
         print(f'Este es el id del ultimo requerimiento: {idUltimoRequerimiento}')
@@ -139,7 +145,7 @@ def createIssue(dataIssue: dict) -> json:
             print(f'{i} : {issueDict[i]}')
         try:       
             ##Descomentar para crear un requerimiento en JIRA            
-            #newIssue = jira.create_issue(fields=issueDict)
+            newIssue = jira.create_issue(issueDict)
             print(f'creando requerimiento: {newIssue}')
             #Formateo el enlace al requerimiento
             # input('presione para continuar')
