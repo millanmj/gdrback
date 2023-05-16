@@ -139,7 +139,7 @@ def createIssue(dataIssue: dict) -> json:
             print(f'{i} : {issueDict[i]}')
         try:       
             ##Descomentar para crear un requerimiento en JIRA            
-            newIssue = jira.create_issue(fields=issueDict)
+            #newIssue = jira.create_issue(fields=issueDict)
             print(f'creando requerimiento: {newIssue}')
             #Formateo el enlace al requerimiento
             # input('presione para continuar')
@@ -173,5 +173,5 @@ def createIssue(dataIssue: dict) -> json:
     except: link = 'hola mundo'
     
     # return jsonify({"link":link, "key":newIssue.key, "internalStatus": status})
-    return jsonify({"link":link, "key":link, "internalStatus": status})
+    return jsonify({"hola": "mundo"})
   
