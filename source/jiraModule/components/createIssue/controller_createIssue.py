@@ -150,7 +150,7 @@ def createIssue(dataIssue: dict) -> json:
             # input('presione para continuar')
             link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
          
-            status = '200'    
+            #status = '200'    
         except requests.exceptions.HTTPError as e:
             response_json = e.response.json()
             error_messages = response_json.get("errorMessages", [])
