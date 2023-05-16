@@ -7,6 +7,7 @@ def MapeoDeRequerimientos(data: json, issue_dict : dict, ENVIROMENT: str) -> dic
     names: list = ['GDD', 'GT', 'GP0007', 'RDG', 'SP000BN']
     
     if (ENVIROMENT == 'PROD'):
+        print("ENVIRONMENT")
         #MAPEO DE CAMPOS EN PROYECTO GESTIÓN DE LA DEMANDA
         if (data['key'] == 'GDD'):
         

@@ -107,7 +107,7 @@ def getlastIssueReq(num_issues=10):
 
 
 def createIssue(dataIssue: dict) -> json:
-    
+    link: str = ''
     newIssue: object = None
     try:
         jira = jiraServices.getConection()
@@ -126,7 +126,14 @@ def createIssue(dataIssue: dict) -> json:
                                         Beneficio: {dataIssue['impact']}'.
                                         Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                         "priority": {"id":dataIssue['priority']},
-                        # "issuetype": {"id":"10001"}
+                        "issuetype": {
+                            "description": "Un trabajo pequeño que forma parte de una tarea de mayor tamaño.",
+                            "hierarchyLevel": -1,
+                            "iconUrl": "https://provinciamicroempresas.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+                            "id": "10001",
+                            "name": "Subtarea",
+                            "self": "https://provinciamicroempresas.atlassian.net/rest/api/3/issuetype/10001"
+                        }
                         #"issuetype": {"name": "Tarea"}
                     }   
         print(issueDict)
