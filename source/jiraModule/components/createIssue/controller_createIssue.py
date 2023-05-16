@@ -65,41 +65,44 @@ def getlastIssue():
 
 
 def getlastIssueReq(num_issues=10):
-    # Configure el servidor Jira y la autenticación
-    server = f"https://{domain}.com"
-    api_url = f"{server}/rest/api/2/search"
-    regex = r"\[REQ\s+(\d+)\]"
-    project_code = "GDD"
-    req_ids = []
-    
-    # Configure los parámetros de la solicitud GET
-    params = {
-        "jql": f"project={project_code} ORDER BY created DESC",
-        "maxResults": num_issues
-    }
-
-    # Envíe la solicitud GET y maneje la respuesta
-    response = conexion.get(params)
-    if response.status_code == 200:
-        # Analizar la respuesta JSON y obtener los últimos 10 requerimientos del proyecto
-        result = response.json()
-        issues = result.get("issues", [])
-        if issues:
-            for issue in issues:
-                summary = str(issue.get('fields').get('summary'))
-                match = re.search(regex, summary)
-                if match:
-                    req_id = match.group(1)
-                    print(f"Requerimiento encontrado: {req_id}")
-                    req_ids.append(int(req_id))
-                    return str(int(req_id)+1)
-                else:
-                    print(f"No se encontró el número de requerimiento en el campo 'summary'.")
-        else:
-            print(f"No se encontraron requerimientos en el proyecto {project_code}.")
-    else:
-        print(f"Error al buscar los últimos requerimientos del proyecto {project_code}: {response.status_code} - {response.text}")
+    try:
+        # Configure el servidor Jira y la autenticación
+        server = f"https://{domain}.com"
+        api_url = f"{server}/rest/api/2/search"
+        regex = r"\[REQ\s+(\d+)\]"
+        project_code = "GDD"
+        req_ids = []
         
+        # Configure los parámetros de la solicitud GET
+        params = {
+            "jql": f"project={project_code} ORDER BY created DESC",
+            "maxResults": num_issues
+        }
+
+        # Envíe la solicitud GET y maneje la respuesta
+        response = conexion.get(params)
+        if response.status_code == 200:
+            # Analizar la respuesta JSON y obtener los últimos 10 requerimientos del proyecto
+            result = response.json()
+            issues = result.get("issues", [])
+            if issues:
+                for issue in issues:
+                    summary = str(issue.get('fields').get('summary'))
+                    match = re.search(regex, summary)
+                    if match:
+                        req_id = match.group(1)
+                        print(f"Requerimiento encontrado: {req_id}")
+                        req_ids.append(int(req_id))
+                        return str(int(req_id)+1)
+                    else:
+                        print(f"No se encontró el número de requerimiento en el campo 'summary'.")
+            else:
+                print(f"No se encontraron requerimientos en el proyecto {project_code}.")
+        else:
+            print(f"Error al buscar los últimos requerimientos del proyecto {project_code}: {response.status_code} - {response.text}")
+    except Exception as e:
+        print(f"Ocurrió un error al obtener los últimos requerimientos: {e}")
+       
     return req_ids
 
 
@@ -123,8 +126,8 @@ def createIssue(dataIssue: dict) -> json:
                                         Beneficio: {dataIssue['impact']}'.
                                         Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                         "priority": {"id":dataIssue['priority']},
-                        # "type": {"id":"10001"}
-                        "issuetype": {"name": "Tarea"}
+                        # "issuetype": {"id":"10001"}
+                        #"issuetype": {"name": "Tarea"}
                     }   
         print(issueDict)
         print('---------------------------------------------------------------')
@@ -140,7 +143,14 @@ def createIssue(dataIssue: dict) -> json:
             # input('presione para continuar')
             link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
          
-        status = '200'    
+            status = '200'    
+        except requests.exceptions.HTTPError as e:
+            response_json = e.response.json()
+            error_messages = response_json.get("errorMessages", [])
+            errors = response_json.get("errors", {})
+            print(f"Error al crear el issue en JIRA: {error_messages} - {errors}")
+            status = f"Error: {error_messages}"
+            
         except Exception as e:
             print(f"Error al crear el issue en JIRA: {e}")
             
@@ -152,5 +162,5 @@ def createIssue(dataIssue: dict) -> json:
         print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
         status = f'Error: {e}'
   
-    return jsonify({"link":link, "key":newIssue.key, "internalError": status})
+    return jsonify({"link":link, "key":newIssue.key, "internalStatus": status})
   
