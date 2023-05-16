@@ -8,7 +8,7 @@ from source.jiraModule.components.getIssueForID.getIssueForID import getIssueFor
 from source.jiraModule.components.home.home import home_bp
 
 app = Flask(__name__)
-cors = CORS(app, origins=["https://requerimientos.provinciamicrocreditos.com"])  
+cors = CORS(app, origins=["https://requerimientos.provinciamicrocreditos.com"],methods="POST")
 app.url_map.strict_slashes = False
 app.register_blueprint(test_bp)
 app.register_blueprint(createIssue_bp)
