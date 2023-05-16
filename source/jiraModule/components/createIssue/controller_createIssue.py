@@ -143,17 +143,18 @@ def createIssue(dataIssue: dict) -> json:
             print(f'creando requerimiento: {newIssue}')
             #Formateo el enlace al requerimiento
             # input('presione para continuar')
-            try: 
-                link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
-            except: link = 'hola mundo'
+            
+            # try: 
+            #     link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
+            # except: link = 'hola mundo'
          
             #status = '200'    
-        except requests.exceptions.HTTPError as e:
-            response_json = e.response.json()
-            error_messages = response_json.get("errorMessages", [])
-            errors = response_json.get("errors", {})
-            print(f"Error al crear el issue en JIRA: {error_messages} - {errors}")
-            status = f"Error: {error_messages}"
+        # except requests.exceptions.HTTPError as e:
+        #     response_json = e.response.json()
+        #     error_messages = response_json.get("errorMessages", [])
+        #     errors = response_json.get("errors", {})
+        #     print(f"Error al crear el issue en JIRA: {error_messages} - {errors}")
+        #     status = f"Error: {error_messages}"
             
         except Exception as e:
             print(f"Error al crear el issue en JIRA: {e}")
@@ -165,6 +166,12 @@ def createIssue(dataIssue: dict) -> json:
     except Exception as e:
         print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
         status = f'Error: {e}'
-  
-    return jsonify({"link":link, "key":newIssue.key, "internalStatus": status})
+    
+    try: 
+        link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
+        
+    except: link = 'hola mundo'
+    
+    # return jsonify({"link":link, "key":newIssue.key, "internalStatus": status})
+    return jsonify({"link":link, "key":link, "internalStatus": status})
   
