@@ -139,17 +139,19 @@ def createIssue(dataIssue: dict) -> json:
                     }   
         print(issueDict)
         print('---------------------------------------------------------------')
-        MapeoDeRequerimientos(dataIssue, issueDict, jiraServices.getEnviroment())
+        MapeoDeRequerimientos(dataIssue, issueDict,'PROD')
         print('---------------------------------------------------------------')
         for i in issueDict.keys():
             print(f'{i} : {issueDict[i]}')
+            
         try:       
             ##Descomentar para crear un requerimiento en JIRA            
             newIssue = jira.create_issue(issueDict)
             print(f'creando requerimiento: {newIssue}')
             #Formateo el enlace al requerimiento
-            input('presione para continuar')
+            
             status = '200'    
+            
             try: 
                 link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
             except: link = 'hola mundo'         
@@ -166,9 +168,7 @@ def createIssue(dataIssue: dict) -> json:
             print(f"Error al crear el issue en JIRA: {e}")
             
         #jira.add_attachment(issue=new_issue, attachment='C:/Users/Colaborador/Documents/logo-icon.png')
-
        
-        
     except Exception as e:
         print(f'Ocurrio un error en la ejecucion de crear requerimiento: {e}')    
         status = f'Error: {e}'
