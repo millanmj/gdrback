@@ -15,4 +15,4 @@ def TestHeader() -> json:
     data: dict= response.json()        
     print(json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": ")))
     
-    return jsonify(data)
+    return jsonify({"Hola": "mundo"})
