@@ -48,7 +48,7 @@ def getAllProjects() -> list:
     
     '''
     try:
-        print('esto es getallprojects controllers')
+        print('Inicio getallprojects controllers')
         jiraOptions ={'server': "https://"+domain+".atlassian.net"}
         jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
         data: list=[]
