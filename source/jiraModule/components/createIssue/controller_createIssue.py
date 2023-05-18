@@ -132,30 +132,19 @@ def createIssue(dataIssue: dict) -> json:
                                         Beneficio: {dataIssue['impact']}'.
                                         Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                         "priority": {"id":dataIssue['priority']},
-                        "issuetype": {
-                            "id": "10001"                           
-                        }
-                        #"issuetype": {"name": "Tarea"}
+                        "issuetype": {"id": "10001"}                        
                     }   
-        print(issueDict)
-        print('---------------------------------------------------------------')
-        MapeoDeRequerimientos(dataIssue, issueDict,'PROD')
-        print('---------------------------------------------------------------')
+        
+        
         for i in issueDict.keys():
             print(f'{i} : {issueDict[i]}')
             
         try:       
-            ##Descomentar para crear un requerimiento en JIRA            
+            #Descomentar para crear un requerimiento en JIRA            
             newIssue = jira.create_issue(issueDict)
             print(f'creando requerimiento: {newIssue}')
-            #Formateo el enlace al requerimiento
-            
+            #Formateo el enlace al requerimiento            
             status = '200'    
-            
-            try: 
-                link = str(f'https://{domain}.atlassian.net/browse/{newIssue.key}')
-            except: link = 'hola mundo'         
-            
             
         except requests.exceptions.HTTPError as e:
             response_json = e.response.json()
@@ -179,5 +168,5 @@ def createIssue(dataIssue: dict) -> json:
     except: link = 'hola mundo'
     
     return jsonify({"link":link, "key":newIssue.key, "internalStatus": status})
-    #return jsonify({"hola": "mundo"})
+
   
