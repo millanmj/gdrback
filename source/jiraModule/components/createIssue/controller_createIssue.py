@@ -167,6 +167,6 @@ def createIssue(dataIssue: dict) -> json:
         
     except: link = 'hola mundo'
     
-    return jsonify({"link":link, "key":newIssue.key, "internalStatus": status})
+    return jsonify({"link":link, "key":link, "internalStatus": status})
 
   
