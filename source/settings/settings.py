@@ -11,17 +11,21 @@ class Settings:
     DBUSER: str
     DBPASS: str
     DBIP: str
+    DBIPPRIVATE: str
+    DBNAME: str
 
 load_dotenv()
 
 settings = Settings(
-    DOMAIN=os.getenv('DOMAIN'),
-    MAIL=os.getenv('MAIL'),
-    APIKEY=os.getenv('APIKEY'),
-    ENVIROMENT=os.getenv('ENVIROMENT'),
-    DBUSER=os.getenv('DBUSER'),
-    DBPASS=os.getenv('DBPASS'),
-    DBIP=os.getenv('DBIP')
+    DOMAIN= os.getenv('DOMAIN'),
+    MAIL=   os.getenv('MAIL'),
+    APIKEY= os.getenv('APIKEY'),
+    ENVIROMENT= os.getenv('ENVIROMENT'),
+    DBUSER= os.getenv('DBUSER'),
+    DBPASS= os.getenv('DBPASS'),
+    DBIP=   os.getenv('DBIP'),
+    DBIPPRIVATE=    os.getenv('DBIPPRIVATE'),
+    DBNAME= os.getenv('DBNAME')
     )
 
 

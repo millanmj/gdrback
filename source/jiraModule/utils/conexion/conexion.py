@@ -12,12 +12,17 @@ class Conexion:
         self.headers = {"Accept": "application/json", "Content-Type": "application/json"}
         self.path = ""
         self.url = "https://{0}.atlassian.net/rest/api/3/".format(self.domain)
+       
     
-    def get(self, path):
+    def get(self, path, param = {}):
         if isinstance(path, str):
             self.path = path
-            response = requests.get(self.url + self.path, auth=self.auth, headers=self.headers)
-            return response
+            if (param != {}):
+                response = requests.get(self.url + self.path, auth=self.auth, headers=self.headers, params = param)
+                return response
+            else:
+                response = requests.get(self.url + self.path, auth=self.auth, headers=self.headers)
+                return response
         elif isinstance(path, dict):
             return self._get_with_params(path)
         else:
@@ -26,6 +31,8 @@ class Conexion:
     def _get_with_params(self, params_dict):
         response = requests.get(self.url + 'search', auth=self.auth, headers=self.headers, params=params_dict)
         return response
+    
+    
     
     def post(self, path, data):
         self.path = path

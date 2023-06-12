@@ -22,18 +22,37 @@ def MapeoDeRequerimientos(data: json, issue_dict : dict, ENVIROMENT: str) -> dic
 
             if "normativeDate" in data:
                 issue_dict['customfield_10039']=str((data['normativeDate'][0:10]))
+                
 
         #MAPEO DE CAMPOS EN PROYECTO GESTIÓN DE TECNOLOGÍA
         elif (data['key'] == 'GT'):
 
-            issue_dict['description'] = issue_dict['description'] + '\n' + 'Aprobado por: ' + mapeoDeGerente(str(data['approvers']), ENVIROMENT) + 'Gerencia: ' + mapeoGerencia(str(data['approvers']), ENVIROMENT)
+            issue_dict['description'] = f"""{issue_dict['description']} 
+                                            *Aprobado por:* @[{mapeoDeGerente(str(data['approvers']), ENVIROMENT)}]
+                                            *Gerencia:* {mapeoGerencia(str(data['approvers']), ENVIROMENT)}"""
 
             if "finalDate" in data:
-                 issue_dict['description'] = issue_dict['description'] + '\n'  + 'Fecha de implementación: '+ str((data['finalDate'][0:10]))     
+                 issue_dict['description'] = issue_dict['description'] + '\n'  + '*Fecha de implementación:* '+ str((data['finalDate'][0:10]))     
             
             if "normativeDate" in data:
-                 issue_dict['description'] = issue_dict['description'] + '\n' + 'Fecha normativa: '+ str((data['normativeDate'][0:10]))               
+                 issue_dict['description'] = issue_dict['description'] + '\n' + '*Fecha normativa:* '+ str((data['normativeDate'][0:10]))               
 
+        
+        else:
+            
+            issue_dict['description'] = f"""{issue_dict['description']} 
+                                            *Aprobado por:* @[{mapeoDeGerente(str(data['approvers']), ENVIROMENT)}]
+                                            *Gerencia:* {mapeoGerencia(str(data['approvers']), ENVIROMENT)}"""
+
+            if "finalDate" in data:
+                 issue_dict['description'] = issue_dict['description'] + '\n'  + '*Fecha de implementación:* '+ str((data['finalDate'][0:10]))     
+            
+            if "normativeDate" in data:
+                 issue_dict['description'] = issue_dict['description'] + '\n' + '*Fecha normativa:* '+ str((data['normativeDate'][0:10]))                 
+    
+    
+    
+    
     else:
         issue_dict["customfield_10050"] = [{'accountId': mapeoDeGerente(str(data['approvers']), ENVIROMENT)}]
          

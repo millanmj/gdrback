@@ -39,34 +39,47 @@ def getInitiatives()->list:
         print(e)
         initiatives = "Ocurrio un error en la consulta a la tabla del campo Iniciativas"
     
+    
     return initiatives
+
 
 def getAllProjects() -> list:
     '''
     Pos: consulta los proyectos en Jira, los filtra y devuelve 
-    un diccionario con los mismos.
-    
+    un diccionario con los mismos.    
     '''
+    
     try:
-        print('Inicio getallprojects controllers')
+       
         jiraOptions ={'server': "https://"+domain+".atlassian.net"}
         jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
         data: list=[]
         projectInfo: dict = {'name': str, 'key': str}
-        
+        projects: dict = {}
         projects = jira.projects()
     
         for project in projects:
             projectInfo['key']= (project.key)
             projectInfo['name']= (project.name)
+            
             data.append(projectInfo)
             projectInfo = {}
 
-        data = filtrarProyectos(data)
+        # data = filtrarProyectos(data)
         sorted(data, key=lambda name: max(list(name.values())))    
-        print(data)
+        
+        # jsonify({"projects":data})
+        
+        # for i in range(data):
+        #     projects[i+1] = data[i]
+        #     print(data[i])
+            
+        # print('--------------------------------------------------------------')
+        # print(projects)
+        # print('--------------------------------------------------------------')
         
     except Exception as e: 
         print(f'OCurrio un error en la ejecución de obtener proyectos: {e}')
     
+    print(data)
     return data
