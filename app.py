@@ -7,6 +7,7 @@ from source.jiraModule.components.createIssue.view_createIssue import createIssu
 from source.jiraModule.components.getIssues.getIssues import getIssues_bp
 from source.jiraModule.components.getIssueForID.getIssueForID import getIssueForID_bp
 from source.jiraModule.components.home.home import home_bp
+from source.jiraModule.components.userHandler.getSessionJiraUser.view_getSessionJiraUser import loginJira_bp
 from source.jiraModule.components.userHandler.getUserForEmail.view_getUserForEmail import getUserForEmail_bp
 from source.jiraModule.components.userHandler.getUserForProject.view_getUserForProject import getUserForProject_bp
 from source.jiraModule.components.userHandler.getAllUsers.view_getAllUsers import getAllUsers_bp
@@ -26,6 +27,7 @@ app.register_blueprint(getLatestIssuesForProject_bp)
 app.register_blueprint(getUserForEmail_bp)
 app.register_blueprint(getUserForProject_bp)
 app.register_blueprint(getAllUsers_bp)
+app.register_blueprint(loginJira_bp)
 
 app.static_folder = 'static'
 app.template_folder='templates'

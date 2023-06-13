@@ -5,13 +5,13 @@ from source.jiraModule.components.getAllProjects import controller_getAllProject
 
 getAllProjects_bp = Blueprint("getAllProjects_bp", __name__)
 
-@getAllProjects_bp.route('/GetAllProjects', methods=['GET'])
-def GetProjects() -> json:   
+@getAllProjects_bp.route('/GetAllProjects/<token>', methods=['GET'])
+def GetProjects(token) -> json:   
     # initiatives: list = []
     # projects: list = []
     response: dict = {}
     try:
-        projects = controller_getAllProjects.getAllProjects()
+        projects = controller_getAllProjects.getAllProjects(token)
         initiatives = controller_getAllProjects.getInitiatives()
         
     

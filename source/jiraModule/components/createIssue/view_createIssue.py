@@ -14,8 +14,6 @@ from source.jiraModule.components.createIssue import controller_createIssue
 # conexion = Conexion()
 createIssue_bp = Blueprint("createIssue_bp", __name__)
 
-
-
 #Crear requerimiento con la libreria de Jira
 
 @createIssue_bp.route('/createissue', methods=['POST'])

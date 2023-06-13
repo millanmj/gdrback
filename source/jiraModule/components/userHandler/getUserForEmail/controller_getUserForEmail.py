@@ -1,6 +1,7 @@
 import json
 from source.jiraModule.utils.conexion.conexion import Conexion
 
+
 def checkUserInProject(email, project_key):
     conexion = Conexion()
 

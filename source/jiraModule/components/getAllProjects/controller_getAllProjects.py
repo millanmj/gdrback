@@ -43,16 +43,17 @@ def getInitiatives()->list:
     return initiatives
 
 
-def getAllProjects() -> list:
+def getAllProjects(token) -> list:
     '''
     Pos: consulta los proyectos en Jira, los filtra y devuelve 
     un diccionario con los mismos.    
     '''
+    #aca obtengo el token del usuario decodificando.
     
     try:
        
         jiraOptions ={'server': "https://"+domain+".atlassian.net"}
-        jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
+        jira = JIRA(options=jiraOptions, basic_auth=(mail, token))
         data: list=[]
         projectInfo: dict = {'name': str, 'key': str}
         projects: dict = {}
