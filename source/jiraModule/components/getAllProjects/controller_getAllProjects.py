@@ -43,7 +43,7 @@ def getInitiatives()->list:
     return initiatives
 
 
-def getAllProjects(token) -> list:
+def getAllProjects() -> list:
     '''
     Pos: consulta los proyectos en Jira, los filtra y devuelve 
     un diccionario con los mismos.    
@@ -52,35 +52,37 @@ def getAllProjects(token) -> list:
     
     try:
        
-        jiraOptions ={'server': "https://"+domain+".atlassian.net"}
-        jira = JIRA(options=jiraOptions, basic_auth=(mail, token))
-        data: list=[]
-        projectInfo: dict = {'name': str, 'key': str}
-        projects: dict = {}
-        projects = jira.projects()
-    
-        for project in projects:
-            projectInfo['key']= (project.key)
-            projectInfo['name']= (project.name)
+    #     jiraOptions ={'server': "https://"+domain+".atlassian.net"}
+    #     jira = JIRA(options=jiraOptions, basic_auth=(mail))
+    #     data: list=[]
+    #     projectInfo: dict = {'name': str, 'key': str}
+    #     projects: dict = {}
+    #     projects = jira.projects()
+    #     print(projects)
+    #     for project in projects:
+    #         projectInfo['key']= (project.key)
+    #         projectInfo['name']= (project.name)
             
-            data.append(projectInfo)
-            projectInfo = {}
+    #         data.append(projectInfo)
+    #         projectInfo = {}
+    #         print(project)
 
-        # data = filtrarProyectos(data)
-        sorted(data, key=lambda name: max(list(name.values())))    
+    #     data = filtrarProyectos(data)
+    #     sorted(data, key=lambda name: max(list(name.values())))    
         
-        # jsonify({"projects":data})
+    #     jsonify({"projects":data})
         
-        # for i in range(data):
-        #     projects[i+1] = data[i]
-        #     print(data[i])
+    #     # for i in range(data):
+    #     #     projects[i+1] = data[i]
+    #     #     print(data[i])
             
-        # print('--------------------------------------------------------------')
-        # print(projects)
-        # print('--------------------------------------------------------------')
-        
+    #     # print('--------------------------------------------------------------')
+    #     # print(projects)
+    #     # print('--------------------------------------------------------------')
+        return {"key": "GDD", "name": "GDD - Gesti\u00f3n de la Demanda"}
     except Exception as e: 
-        print(f'OCurrio un error en la ejecución de obtener proyectos: {e}')
+         print(f'OCurrio un error en la ejecución de obtener proyectos: {e}')
     
-    print(data)
-    return data
+    # print(data)
+    # return data
+    #return jsonify({project{"key": "GDD", "name": "GDD - Gesti\u00f3n de la Demanda"},})

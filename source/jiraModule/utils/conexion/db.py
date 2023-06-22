@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 from source.settings.settings import settings
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-
-
+import pyodbc  
+print(pyodbc.drivers())
 USER: str = settings.DBUSER
 PASS: str = settings.DBPASS
 IP: str = settings.DBIP

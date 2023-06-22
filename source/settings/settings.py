@@ -13,6 +13,8 @@ class Settings:
     DBIP: str
     DBIPPRIVATE: str
     DBNAME: str
+    DEVCLIENTID: str
+    DEVCLIENSECRET: str
 
 load_dotenv()
 
@@ -24,8 +26,10 @@ settings = Settings(
     DBUSER= os.getenv('DBUSER'),
     DBPASS= os.getenv('DBPASS'),
     DBIP=   os.getenv('DBIP'),
-    DBIPPRIVATE=    os.getenv('DBIPPRIVATE'),
-    DBNAME= os.getenv('DBNAME')
+    DBIPPRIVATE=  os.getenv('DBIPPRIVATE'),
+    DBNAME= os.getenv('DBNAME'),
+    DEVCLIENTID= os.getenv('DEVCLIENTID'),
+    DEVCLIENSECRET= os.getenv('DEVCLIENSECRET') 
     )
 
 

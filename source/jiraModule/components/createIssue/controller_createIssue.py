@@ -65,12 +65,15 @@ def getlastIssue():
     return  reqId 
 
 
-def getlastIssueReq(num_issues=10):
+def getlastIssueReq(num_issues=10, issueType: str = 'REQ'):
     try:
         # Configure el servidor Jira y la autenticación
         server = f"https://{domain}.com"
         api_url = f"{server}/rest/api/2/search"
-        regex = r"\[REQ\s+(\d+)\]"
+        if (issueType == 'REQ'):
+            regex = r"\[REQ\s+(\d+)\]"
+        elif(issueType == "INC"):
+            regex = r"\[INC\s+(\d+)\]"
         project_code = "GDD"
         req_ids = []
         
@@ -138,7 +141,8 @@ def createIssue(dataIssue: dict) -> json:
         
         #CAMPOS MINIMOS NECESARIOS PARA CREAR EL REQUERIMIENTO EN JIRA
         issueDict = {
-                        "project": dataIssue['key'],
+                        #"project": dataIssue['key'],
+                        "project": "GDD",
                         "summary": '[REQ '+ idUltimoRequerimiento+'] ' + dataIssue['summary'],
                         "description": str(f"""
                                         *Creado por:* {dataIssue['user']['name']}
@@ -152,7 +156,7 @@ def createIssue(dataIssue: dict) -> json:
                                         """), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
                                         
                         "priority": {"id": '3'},
-                        "issuetype": {"id": "10003"}                        
+                        "issuetype": {"id": "10001"}                        
                     }   
         
         MapeoDeRequerimientos(dataIssue, issueDict, 'PROD')
@@ -189,6 +193,6 @@ def createIssue(dataIssue: dict) -> json:
         
     except: link = 'hola mundo'
     
-    return jsonify({"link":link, "key":link, "internalStatus": status})
+    return jsonify({"link":link, "key":link})
 
   

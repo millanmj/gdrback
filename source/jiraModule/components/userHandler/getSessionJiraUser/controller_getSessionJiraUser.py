@@ -106,3 +106,45 @@ def get_jira_token(data):
     jira_token = jira_token_data['session']['value']
 
     return jira_token
+
+
+class LoginJiraService:
+    def __init__(self):
+        self.api_url = 'https://auth.atlassian.com/authorize'
+        # audience=api.atlassian.com
+        # client_id=Zg1kfnn2umPy8NDHIkuF1pSbWwSUqSaL
+        # scope=manage%3Ajira-configuration%20read%3Ajira-user%20manage%3Ajira-webhook%20write%3Ajira-work%20manage%3Ajira-project%20read%3Ajira-work%20manage%3Ajira-data-provider
+        # redirect_uri=https%3A%2F%2Flocalhost%3A4200%2Fhome
+        # state=${YOUR_USER_BOUND_VALUE}
+        # response_type=code
+        # prompt=consent
+
+    def get_token(self, google_token):
+        headers = {'Content-Type': 'application/json'}
+        data = {
+            'audience': 'api.atlassian.com',
+            'client_id': settings.DEVCLIENTID,  # You need to define environment.clientId
+            'scope': 'manage%3Ajira-configuration%20read%3Ajira-user%20manage%3Ajira-webhook%20write%3Ajira-work%20manage%3Ajira-project%20read%3Ajira-work%20manage%3Ajira-data-provider',
+            'redirect_uri':'https://localhost:4200/home',
+            'state': str(google_token),           
+            'response_type': 'code',
+            'prompt': 'consent'
+            #'grant_type': 'authorization_code',
+            #'client_secret': settings.DEVCLIENSECRET,  # You need to define environment.clientSecret
+            #'code': google_token,  
+        }
+       
+        try:
+            response = requests.get(self.api_url, json=data, headers=headers)
+            return(response)
+            print('----------------------------')
+            #response.raise_for_status()
+            
+            json_data = response.json()
+            # Visualizar los datos obtenidos
+            print('esto es el json data: {json_data}')
+            
+            return json_data
+        except requests.exceptions.RequestException as e:
+            print(f"Error en la solicitud: {e}")
+            return None
