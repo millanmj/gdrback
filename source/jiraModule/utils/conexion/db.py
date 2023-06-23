@@ -2,13 +2,19 @@ from sqlalchemy import create_engine
 from source.settings.settings import settings
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-
-
+import pyodbc  
+print(pyodbc.drivers())
 USER: str = settings.DBUSER
 PASS: str = settings.DBPASS
 IP: str = settings.DBIP
-#descomentar al subir aproduccion la variables de ambiente
-engine = create_engine(f'mssql://{USER}:{PASS}@{IP}/PNET?driver=ODBC Driver 17 for SQL Server')
+NAME: str = settings.DBNAME
+print(NAME)
+# Crear la cadena de conexión
+conn_str = f"mssql+pyodbc://{USER}:{PASS}@{IP}/{NAME}?driver=ODBC Driver 17 for SQL Server"
+
+# Crear el motor y la sesión
+engine = create_engine(conn_str)
+
 Session = sessionmaker(bind=engine)
 session = Session()
 Base = declarative_base()

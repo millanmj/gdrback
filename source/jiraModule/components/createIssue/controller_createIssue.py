@@ -65,12 +65,15 @@ def getlastIssue():
     return  reqId 
 
 
-def getlastIssueReq(num_issues=10):
+def getlastIssueReq(num_issues=10, issueType: str = 'REQ'):
     try:
         # Configure el servidor Jira y la autenticación
         server = f"https://{domain}.com"
         api_url = f"{server}/rest/api/2/search"
-        regex = r"\[REQ\s+(\d+)\]"
+        if (issueType == 'REQ'):
+            regex = r"\[REQ\s+(\d+)\]"
+        elif(issueType == "INC"):
+            regex = r"\[INC\s+(\d+)\]"
         project_code = "GDD"
         req_ids = []
         
@@ -111,7 +114,10 @@ def createIssue(dataIssue: dict) -> json:
     link: str = ''
     newIssue: object = None
     try:
-        print('esto es getallprojects controllers')
+        print(f'Esto es lo que llega del front: {dataIssue}')
+       
+        
+
         jiraOptions ={'server': "https://"+domain+".atlassian.net"}
         jira = JIRA(options=jiraOptions, basic_auth=(mail, tokenId))
         jira = jiraServices.getConection()
@@ -119,22 +125,42 @@ def createIssue(dataIssue: dict) -> json:
         
         idUltimoRequerimiento: str = ''
         idUltimoRequerimiento = getlastIssueReq()    
-        print(f'Este es el id del ultimo requerimiento: {idUltimoRequerimiento}')
- 
+        
+        # try:
+            
+        #     # Convertir el valor de 'userCredential' de string a diccionario
+        #     user_credential = json.loads(dataIssue['userCredential'])
+        #     print(user_credential)
+        #     print(type(user_credential))
+        #     # Acceder a la clave 'given_name' en el diccionario 'user_credential'          
+
+        #     user: str = user_credential['given_name']
+        #     userEmail: str = user_credential['email']
+            
+        # except: print('fallo mapeo de google')
         
         #CAMPOS MINIMOS NECESARIOS PARA CREAR EL REQUERIMIENTO EN JIRA
         issueDict = {
-                        "project": dataIssue['key'],
+                        #"project": dataIssue['key'],
+                        "project": "GDD",
                         "summary": '[REQ '+ idUltimoRequerimiento+'] ' + dataIssue['summary'],
                         "description": str(f"""
-                                        Rol: {dataIssue['managment']}.
-                                        Funcionalidad: {dataIssue['description']}.
-                                        Beneficio: {dataIssue['impact']}'.
-                                        Enlace a la Documentación: {dataIssue['attached']}."""), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
-                        "priority": {"id":dataIssue['priority']},
+                                        *Creado por:* {dataIssue['user']['name']}
+                                        *Correo:* {dataIssue['user']['email']}                                        
+                                        *Rol:* {dataIssue['managment']}
+                                        *Funcionalidad:* {dataIssue['description']}
+                                        *Beneficio:* {dataIssue['impact']}
+                                        *Enlace a la Documentación:* {dataIssue['attached']}.
+                                        *Prioridad* definida por el usuario: {dataIssue['priority']} 
+                                        *Iniciativa:* {dataIssue['initiative']}
+                                        """), #+ '\n Iniciativa: '+ dataIssue['initiative'],        
+                                        
+                        "priority": {"id": '3'},
                         "issuetype": {"id": "10001"}                        
                     }   
         
+        MapeoDeRequerimientos(dataIssue, issueDict, 'PROD')
+ 
         
         for i in issueDict.keys():
             print(f'{i} : {issueDict[i]}')
@@ -167,6 +193,6 @@ def createIssue(dataIssue: dict) -> json:
         
     except: link = 'hola mundo'
     
-    return jsonify({"link":link, "key":link, "internalStatus": status})
+    return jsonify({"link":link, "key":link})
 
   
